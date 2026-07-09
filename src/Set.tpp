@@ -4,7 +4,7 @@
 // insert()
 template<typename V>
 void set<V>::insert(V val){
-    map.insert(V,true);
+    map.insert(val,true);
 }
 
 // exists()
@@ -25,3 +25,17 @@ size_t set<V>::size(){
     return map.size();
 }
 
+
+// getAll()
+template<typename V>
+DynamicArray<V> set<V>::getAll(){
+    DynamicArray<V>get;
+    get=map.getkeys();
+    return get;
+}
+
+// clear()
+template<typename V>
+void set<V>::clear(){
+    map.clear();
+}

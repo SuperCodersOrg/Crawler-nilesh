@@ -1,4 +1,4 @@
-# Build Log – 9 July 2026 (Session 12)
+# Build Log – 9 July 2026 (Session 2)
 
 **Duration:** 2:00 PM – 4:00 PM
 

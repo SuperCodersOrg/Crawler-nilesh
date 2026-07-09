@@ -12,6 +12,7 @@ class set{
     bool exists(V val);
     void remove(V val);
     size_t size();
+    DynamicArray<V> getAll();
     void clear();
 
 };

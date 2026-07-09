@@ -124,15 +124,16 @@ bool HashMap<K,V>::remove(const K& key)
     LinkedList<Pair>& bucket = buckets[index];
 
     typename LinkedList<Pair>::Node* curr = bucket.head;
-
+    int i=0;
     while(curr)
     {
         if(curr->data.key == key)
         {
-            bucket.remove(curr->data);
+            bucket.remove(i);
             elementCount--;
             return true;
         }
+        i++;
 
         curr = curr->next;
     }

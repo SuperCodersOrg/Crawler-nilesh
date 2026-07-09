@@ -1,32 +1,22 @@
-#include <iostream>
-#include <sstream>
-#include <vector>
-#include <stack>
+#include<string>
+#include "include/Set.h"
 #include "include/STL/HashMap.h"
 
 using namespace std;
 
 
 int main() {
-    HashMap<string,int>map;
-    map.insert("hi",1);
-    map.insert("hi2",2);
-    map.insert("h3i",3);
-    map.insert("hi4",4);
-    map.insert("hi4",5);
-    map.insert("hi5",6);
-    map.insert("hi6",7);
-    map.insert("hi7",8);
-    map.insert("hi8",18);
+    set<string>s;
+    HashMap<string,bool>map;
+    map.insert("fsd",true);
+    map.insert("fsd1",true);
+    map.insert("fsd2",true);
+    map.remove("fsd");
+    cout<<map.size();
+    DynamicArray<string>sst;
+    sst=map.getkeys();
 
-    DynamicArray<string>s;
-    s=map.getkeys();
-
-    for(int i=0;i<s.size();i++){
-        cout<<s[i]<<endl;
-    }
     
-
     
     
 }

@@ -15,8 +15,6 @@ class Frontier{
     };
     Queue<URL>url;
     void To_lower(string &link);
-    string parseScheme(string &source);
-    string parseUser(string &source);
     void removeFragment(string & source);
     void normalizePath(string &source);
 

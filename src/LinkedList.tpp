@@ -1,4 +1,4 @@
-#include "../../include/STL/LinkedList.h"
+#include "../include/STL/LinkedList.h"
 #include <iostream>
 
 

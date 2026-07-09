@@ -40,4 +40,4 @@ template<typename T>class LinkedList{
 
 };
 
-#include "../../src/LinkedList/LinkedList.tpp"
+#include "../../src/LinkedList.tpp"

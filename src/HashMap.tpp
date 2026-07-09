@@ -1,7 +1,7 @@
-#include"../../include/STL/LinkedList.h"
-#include"../../include/STL/LinkedList.h"
-#include"../../include/STL/MyHash.h"
-#include"../../include/STL/HashMap.h"
+#include"../include/STL/LinkedList.h"
+#include"../include/STL/LinkedList.h"
+#include"../include/STL/MyHash.h"
+#include"../include/STL/HashMap.h"
 
 //
 // Pair Constructor
@@ -218,4 +218,21 @@ void HashMap<K,V>::rehash()
             curr = curr->next;
         }
     }
+}
+
+template<typename K, typename V>
+DynamicArray<K> HashMap<K,V>::getkeys() {
+    DynamicArray<K> keys;
+
+    for (int i = 0; i < buckets.size(); i++) {
+
+        typename LinkedList<Pair>::Node* curr = buckets[i].head;
+
+        while (curr != nullptr) {
+            keys.push_back(curr->data.key);
+            curr = curr->next;
+        }
+    }
+
+    return keys;
 }

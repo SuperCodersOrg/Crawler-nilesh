@@ -1,4 +1,4 @@
-#include "../../include/STL/DynamicArray.h"
+#include "../include/STL/DynamicArray.h"
 #include <type_traits>
 #include <stdlib.h>
 #include <new>

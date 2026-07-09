@@ -1,0 +1,19 @@
+#pragma once
+#include "STL/HashMap.h"
+
+
+template<typename V>
+class set{
+    private:
+    HashMap<V,bool>map;
+
+    public:
+    void insert(V val);
+    bool exists(V val);
+    void remove(V val);
+    size_t size();
+    void clear();
+
+};
+
+#include "../src/Set.tpp"

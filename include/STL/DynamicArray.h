@@ -27,4 +27,4 @@ template<typename T> class DynamicArray{
     void clear(); // remove all elements
 };
 
-#include "../../src/DynamicArray/DynamicArray.tpp"
+#include "../../src/DynamicArray.tpp"

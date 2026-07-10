@@ -187,7 +187,7 @@ static bool waitForChromeEndpoint(const std::string& port, int retries = 30) {
 int main(int argc, char** argv) {
     
 
-    std::string targetUrl = "https://codequotient.com";
+    std::string targetUrl = "https://en.wikipedia.org/wiki/Computer";
     std::string outFile = "../pages/output.html";
     int extraWaitSeconds = 3;
 

@@ -1,4 +1,13 @@
-<html lang="en"><head>
+#include<string>
+#include "include/Set.h"
+#include "include/STL/HashMap.h"
+#include"include/HtmlParser.h"
+
+using namespace std;
+
+
+int main() {
+    string s=R"HTML(<html lang="en"><head>
     <title>CodeQuotient | Building AI Talent for the World</title>
 
     <meta charset="utf-8">
@@ -3569,4 +3578,37 @@ section.logos-section {
 	</script>
 
 
-</body></html>
+</body></html>)HTML";
+
+    // DynamicArray<string>links;
+    // size_t i=1;
+    
+    // while(i<s.size()){
+    //     size_t pos=s.find("http");
+    //     if(pos==string::npos){
+    //         break;
+    //     }
+    //     string remaining=s.substr(pos);
+    //     pos=remaining.find('"');
+    //     links.push_back(remaining.substr(0,pos));
+    //     s=remaining.substr(pos);
+        
+    // }
+
+    // for(int i=0;i<links.size();i++){
+    //   cout<<links[i]<<endl;
+    // }
+
+    HtmlParser parser;
+    DynamicArray<string>links;
+
+    links=parser.parseHtml(s);
+
+    cout<<"inside main"<<endl;
+    for(int i=0;i<links.size();i++){
+      cout<<links[i]<<endl;
+    }
+    
+    
+    
+}

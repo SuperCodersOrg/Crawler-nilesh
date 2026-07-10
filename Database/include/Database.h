@@ -6,7 +6,6 @@
 class Database
 {
 private:
-
     sqlite3* db;
 
 public:

@@ -3,86 +3,67 @@
 #include<string>
 #include<sstream>
 
-// To_lower()
-void Frontier::To_lower(string &link){
-    for(char &c:link){
-        if(c>= 'A' && c<='Z'){
-            c=c-'A'+'a';
-        }
-    }
-    
-};
-
-// removeFragment()
-void Frontier::removeFragment(string &source){
-    size_t pos=source.find('#');
-    if(pos==string::npos) return ;
-    source=source.substr(0,pos);    
+// put(link and depth)
+void Frontier::put(string & link,int deep){
+    visited.insert(link);
+    URL url;
+    url.link=link;
+    url.lastCrawl=getDate();
+    url.depth=deep;
+    queue.push(url);
 }
 
-// normalizePath()
-void Frontier::normalizePath(string &source){
-    DynamicArray<string>content;
-    string token;
-    stringstream ss(source);
-    while(getline(ss,token,'/')){
-        if(token.empty() || token==".")continue;
+// pop()
+Frontier :: URL Frontier::pop(){
+    return queue.pop();
+}
 
-        if(token==".."){
-            if(content.size()!=0){
-                content.pop_back();
-            }
-            continue;
-        }
-        content.push_back(token);
-    }
-    string result="/";
-    for(int i=0;i<content.size();i++){
-        result=result+ content[i]+'/';
-    }
+// getLink()
+string Frontier::getLink(){
+    URL url;
+    url=queue.front();
+    return url.link;
+}
 
-    
-    source=result;
+// empty()
+bool Frontier::empty(){
+    return queue.empty();
+}
 
+// getDepth()
+int Frontier::getDepth(){
+    URL url;
+    url=queue.front();
+    return url.depth;
+}
+
+// getDate()
+string Frontier:: getDate() {
+
+    time_t now = time(NULL);
+    tm *t = localtime(&now);
+
+    char date[11];
+
+    sprintf(date, "%04d-%02d-%02d",
+            t->tm_year + 1900,
+            t->tm_mon + 1,
+            t->tm_mday);
+
+    return date;
 }
 
 
-//normalizer()
-string Frontier::normalizer(string &source){
-    To_lower(source);
 
-    removeFragment(source);
 
-    size_t schemePos=source.find("://"); 
-    
-    if(schemePos==string::npos)return "null";
-
-    string scheme = source.substr(0,schemePos);
-    string remaining = source.substr(schemePos+3);
-
-    size_t slashPos=remaining.find('/');
-    if(slashPos==string::npos)return "null";
-
-    string authority=remaining.substr(0,slashPos);
-    string path =remaining.substr(slashPos);
-
-    size_t dotPos=authority.find(':');
-    if(dotPos!=string::npos){
-        string port=authority.substr(dotPos+1);
-        string host=authority.substr(0,dotPos);
-
-        if((port=="80" && scheme=="http")||(port=="443" && scheme == "https")){
-            authority=host;
-        }
-    }
-    normalizePath(path);
-
-    return scheme + "://" + authority + path;
+// exists()
+bool Frontier::exists(string link){
+    return visited.exists(link);
 }
 
-int main(){
-    Frontier f;
-    string s="HTTP://Example.COM:80/a/./b/../c//index.html#abc";
-    cout<<"Input: "<<s<<endl;
-    cout<<"Output: "<<f.normalizer(s);
-}
+// int main(){
+//     Frontier f;
+//     string s="HTTP://Example.COM:80/a/./b/../c//index.html#abc";
+//     cout<<"Input: "<<s<<endl;
+//     cout<<"Output: "<<f.normalizer(s);
+// }

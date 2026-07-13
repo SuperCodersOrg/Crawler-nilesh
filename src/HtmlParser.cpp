@@ -27,7 +27,7 @@ size_t HtmlParser ::parseHttp(string html){
 size_t HtmlParser::parseHref(string html){
     size_t index=4;
     cout<<"Hit Href"<<endl;
-    while(index<html.size()){
+    while(index<=html.size()){
         if(html[index]==' '){
             index++;
             continue;
@@ -59,22 +59,19 @@ size_t HtmlParser::parseHref(string html){
 
 DynamicArray<string> HtmlParser::parseHtml(string html){
     size_t index=0;
-    cout<<"hit http---------"<<endl;
-    while(index<html.size()){
+    while(index+4<=html.size()){
         if(html.substr(index,4)=="href"){
-    
             index=index+parseHref(html.substr(index));
             continue;
         }
-        
         if(html.substr(index,4)=="http"){
-    
             index=index+parseHttp(html.substr(index));
             continue;
         }
         index++;
-        // delete it
         
     }
+
+    
     return links;
 }

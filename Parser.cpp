@@ -2,6 +2,7 @@
 #include "include/Set.h"
 #include "include/STL/HashMap.h"
 #include"include/HtmlParser.h"
+#include "include/Normalizer.h"
 
 using namespace std;
 
@@ -3608,6 +3609,22 @@ section.logos-section {
     for(int i=0;i<links.size();i++){
       cout<<links[i]<<endl;
     }
+
+    cout<<links.size()<<endl;
+
+    cout<<"---------------------------Normalisation starts-------------------------------------------"<<endl;
+
+  
+    Normalizer normalizer;
+    DynamicArray<string>nm;
+
+    nm=normalizer.normalize(links);
+    cout<<nm.size()<<endl;
+    for(int i=0;i<nm.size();i++){
+      cout<<nm[i]<<endl;
+    }
+
+
     
     
     

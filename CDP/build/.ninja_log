@@ -1,3 +1,9 @@
 # ninja log v7
-7	9059	8053912300052969	CMakeFiles/cdp_scraper.dir/cdp_scraper.cpp.obj	e03d73e02e5b6c60
-9072	10070	8053912390689413	cdp_scraper.exe	bf67df07c2c81d3b
+37	4378	8056518890075708	CMakeFiles/cdp_scraper.dir/main.cpp.obj	62abfce6bda8bf69
+9	7233	8056518889784919	CMakeFiles/cdp_scraper.dir/CDPScraper.cpp.obj	d59728e6879bc48e
+7233	7946	8056518962029076	cdp_scraper.exe	f552cfa7297d4ff1
+21	4858	8056527403615832	CMakeFiles/cdp_scraper.dir/main.cpp.obj	62abfce6bda8bf69
+4862	5635	8056527452031138	cdp_scraper.exe	f552cfa7297d4ff1
+51	4877	8056533328695932	CMakeFiles/cdp_scraper.dir/main.cpp.obj	62abfce6bda8bf69
+20	8782	8056533328384244	CMakeFiles/cdp_scraper.dir/CDPScraper.cpp.obj	d59728e6879bc48e
+8782	9283	8056533416012538	cdp_scraper.exe	f552cfa7297d4ff1

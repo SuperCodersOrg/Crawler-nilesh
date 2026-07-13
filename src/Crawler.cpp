@@ -27,6 +27,7 @@ void Crawler::crawl(string seed,int deep=0){
         normalizer.normalize(links[i]);
         if(!frontier.exists(links[i])){
             frontier.put(links[i],deep+1);
+            cout<<links[i]<<endl;
         }
     }
     frontier.pop();
@@ -37,5 +38,5 @@ void Crawler::crawl(string seed,int deep=0){
 
 int main(){
     Crawler c;
-    c.crawl("https://nileshsahu.in/");
+    c.crawl("https://en.wikipedia.org/wiki/Computer");
 }

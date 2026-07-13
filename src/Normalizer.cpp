@@ -14,6 +14,20 @@ void Normalizer::To_lower(string &link){
     
 };
 
+// Normalizer()
+Normalizer::Normalizer(){
+    ignoreDomain.insert("drive.google.com");
+    ignoreDomain.insert("youtube.com");
+    ignoreDomain.insert("twitter.com");
+    ignoreDomain.insert("x.com");
+    ignoreDomain.insert("facebook.com");
+    ignoreDomain.insert("instagram.com");
+    ignoreDomain.insert("tiktok.com");
+    ignoreDomain.insert("snapchat.com");
+    ignoreDomain.insert("pinterest.com");
+    ignoreDomain.insert("reddit.com");
+}
+
 
 // removeFragment()
 void Normalizer::removeFragment(string &source){
@@ -66,8 +80,7 @@ string Normalizer::normalize(string &source){
     }
     
     removeFragment(source);
-    //delte it
-    cout<<"Common fragment removed: "<<source<<endl;
+    
 
     
     size_t schemePos=source.find("://"); 
@@ -102,8 +115,9 @@ void Normalizer::relativeURL(string & source){
         cout<<"Seed link is not valid or relative";
         return ;
     }
+    if(source[0]=='/')source=source.substr(1,source.size()-1);
+    source=seedLink+source;
     
-    source=seedLink+'/'+source;
    
 
 }

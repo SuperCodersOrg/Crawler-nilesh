@@ -42,3 +42,17 @@
 124	2128	8056665887509100	CMakeFiles/crawler.dir/src/Normalizer.cpp.obj	2190629ef2606e2f
 53	5640	8056665886811440	CMakeFiles/crawler.dir/src/Crawler.cpp.obj	f3c2cbe731898cb4
 5640	6299	8056665942672238	crawler.exe	1575410ef4f8fafa
+269	1926	8056745938472106	CMakeFiles/crawler.dir/src/Normalizer.cpp.obj	2190629ef2606e2f
+230	5188	8056745938093544	CMakeFiles/crawler.dir/src/Crawler.cpp.obj	f3c2cbe731898cb4
+5188	5901	8056745987653054	crawler.exe	1575410ef4f8fafa
+204	5939	8056752649397871	CMakeFiles/crawler.dir/src/Normalizer.cpp.obj	2190629ef2606e2f
+5943	6696	8056752706765664	crawler.exe	1575410ef4f8fafa
+166	2206	8056754596557725	CMakeFiles/crawler.dir/src/HtmlParser.cpp.obj	5300795207657594
+248	2303	8056754597394927	CMakeFiles/crawler.dir/src/Normalizer.cpp.obj	2190629ef2606e2f
+98	5337	8056754595909628	CMakeFiles/crawler.dir/src/Crawler.cpp.obj	f3c2cbe731898cb4
+5337	6050	8056754648257795	crawler.exe	1575410ef4f8fafa
+224	2748	8056759949549750	CMakeFiles/crawler.dir/src/Normalizer.cpp.obj	2190629ef2606e2f
+151	6675	8056759948824857	CMakeFiles/crawler.dir/src/Crawler.cpp.obj	f3c2cbe731898cb4
+6676	7626	8056760014058578	crawler.exe	1575410ef4f8fafa
+111	1841	8056762944864458	CMakeFiles/crawler.dir/src/HtmlParser.cpp.obj	5300795207657594
+1844	2581	8056762962160188	crawler.exe	1575410ef4f8fafa

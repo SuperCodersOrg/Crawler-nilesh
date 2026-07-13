@@ -14,11 +14,6 @@ class Crawler{
     CDPScraper fetch;
     HtmlParser htmlparser;
 
-
-    
-    
-    
-    
     public:
     Crawler();
     void crawl(string seed,int deep);

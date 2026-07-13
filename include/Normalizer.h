@@ -11,15 +11,16 @@ class Normalizer{
     void removeFragment(string& link);
     void normalizePath(string &source);
     void relativeURL(string &source);
+    set<string>ignoreDomain;
+    set<string>ignoreExtension;
     Frontier frontier;
+
     
     
     public:
     bool isrelative(string &source);
     string seedLink;
-
-
-
+    Normalizer();
     string normalize(string & link);
     DynamicArray<string> normalize(DynamicArray<string> & link);
 

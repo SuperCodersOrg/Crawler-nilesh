@@ -17,16 +17,20 @@ size_t HtmlParser ::parseHttp(string html){
             links.push_back(html.substr(0,index));
             return index;
         }
+        if(html[index]==';'){
+            links.push_back(html.substr(0,index));
+            return index;
+        }
         index++;
     }
-    cout<<"Http error at size:------------"<<html.size();
+    
     
     return 1;
 }
 
 size_t HtmlParser::parseHref(string html){
     size_t index=4;
-    cout<<"Hit Href"<<endl;
+    
     while(index<=html.size()){
         if(html[index]==' '){
             index++;
@@ -40,7 +44,7 @@ size_t HtmlParser::parseHref(string html){
             index++;
             size_t first =index;
             while(index<html.size()){
-                if(html[index]=='"' || html[index]=='\'' || html[index]==')'){
+                if(html[index]=='"' || html[index]=='\'' || html[index]==')'|| html[index]==';'){
                     
                     links.push_back(html.substr(first,index-first));
                     return index;
@@ -51,8 +55,7 @@ size_t HtmlParser::parseHref(string html){
         }
         index++;
     }
-    cout<<"Herf error at size:"<<html.size()<<endl;
-    cout<<html.substr(0,50)<<endl;
+    
     return 1;
 
 }

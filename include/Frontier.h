@@ -15,11 +15,11 @@ class Frontier{
     };
     string getDate();
     Queue<URL>queue;
-    set<string>visited;
+    
     
     
     public:
-    bool exists(string link);
+    
     void put(string& link,int depth);
     URL pop();
     bool empty();

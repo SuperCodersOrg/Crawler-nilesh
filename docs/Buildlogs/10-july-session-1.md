@@ -1,6 +1,6 @@
 # Build Log – 9 July 2026 (Session 1)
 
-
+**Duration:** 9:00 AM – 12:00 PM
 ## Goal
 
 Implement the initial version of the **HTML Parser** for the web crawler. The objective was to extract URLs from downloaded HTML content so that newly discovered links could later be normalized and inserted into the Frontier.

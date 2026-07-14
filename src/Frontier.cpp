@@ -5,7 +5,6 @@
 
 // put(link and depth)
 void Frontier::put(string & link,int deep){
-    visited.insert(link);
     URL url;
     url.link=link;
     url.lastCrawl=getDate();
@@ -57,9 +56,7 @@ string Frontier:: getDate() {
 
 
 // exists()
-bool Frontier::exists(string link){
-    return visited.exists(link);
-}
+
 
 // int main(){
 //     Frontier f;

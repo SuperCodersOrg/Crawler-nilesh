@@ -9,6 +9,7 @@
 class Crawler{
     private:
     int depth;
+    set<string>visited;
     Frontier frontier;
     Normalizer normalizer;
     CDPScraper fetch;

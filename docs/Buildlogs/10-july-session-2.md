@@ -1,6 +1,6 @@
 # Build Log – 10 July 2026 (Session 2)
 
-
+**Duration:** 2:00 PM – 6:00 PM
 
 ## Goal
 

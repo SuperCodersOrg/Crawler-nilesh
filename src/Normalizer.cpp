@@ -1,6 +1,7 @@
 #include "../include/Normalizer.h"
 #include<string>
 #include<sstream>
+#include<fstream>
 
 
 
@@ -14,18 +15,46 @@ void Normalizer::To_lower(string &link){
     
 };
 
+// read()
+string Normalizer::read(string page){
+    ifstream file(page);
+
+    if(!file.is_open()){
+        cout<<"File not found"<<endl;
+        return "File not found";
+    }
+    
+
+    string txt;
+
+    while (getline(file, txt)) {
+
+        if (!txt.empty() && txt.back() == ',')
+            txt.pop_back();
+
+    
+        if(page==DOMAIN_FILE){
+
+            ignoreDomain.insert(txt);
+        }
+        else{
+            ignoreExtension.insert(txt);
+        }
+
+    }
+
+    file.close();
+    return txt;
+
+
+
+}
+
 // Normalizer()
 Normalizer::Normalizer(){
-    ignoreDomain.insert("drive.google.com");
-    ignoreDomain.insert("youtube.com");
-    ignoreDomain.insert("twitter.com");
-    ignoreDomain.insert("x.com");
-    ignoreDomain.insert("facebook.com");
-    ignoreDomain.insert("instagram.com");
-    ignoreDomain.insert("tiktok.com");
-    ignoreDomain.insert("snapchat.com");
-    ignoreDomain.insert("pinterest.com");
-    ignoreDomain.insert("reddit.com");
+    read(DOMAIN_FILE);
+    read(EXTENSION_FILE);
+    
 }
 
 
@@ -52,6 +81,19 @@ void Normalizer::normalizePath(string &source){
         }
         content.push_back(token);
     }
+    if(content.size()){
+        string extension=content[content.size()-1];
+        size_t pos=extension.find('.');
+        if(pos!=string::npos){
+            cout<<"Name :"<<extension<<endl;
+            extension=extension.substr(pos);
+            cout<<"extension :"<<extension<<endl<<endl;
+            if(ignoreExtension.exists(extension)){
+                source="";
+                return ;
+            }
+        }
+    }
     string result="/";
     for(int i=0;i<content.size();i++){
         result=result+ content[i]+'/';
@@ -69,27 +111,32 @@ bool Normalizer::isrelative(string & source){
 
 }
 
-//string normalizer()
-string Normalizer::normalize(string &source){
+//string normalize()
+void Normalizer::normalize(string &source){
     To_lower(source);
-    
-    
+
     // relative url hai
     if(isrelative(source)){
-        relativeURL(source);   
+        relativeURL(source); 
+        if (source.empty())
+        return ; 
     }
     
     removeFragment(source);
+    if (source.empty()) return ;
     
 
     
     size_t schemePos=source.find("://"); 
     
+    
     string scheme = source.substr(0,schemePos);
     string remaining = source.substr(schemePos+3);
 
     size_t slashPos=remaining.find('/');
-    if(slashPos==string::npos)return "null";
+    if(slashPos==string::npos){
+        return;
+    }
 
     string authority=remaining.substr(0,slashPos);
     string path =remaining.substr(slashPos);
@@ -103,20 +150,42 @@ string Normalizer::normalize(string &source){
             authority=host;
         }
     }
+
+    // ignoreDomains
+    size_t checkpos=authority.find("www.");
+    string checkauth=authority;
+    if(checkpos!=string::npos){
+        checkauth=authority.substr(4);
+    }
+    if(ignoreDomain.exists(checkauth)){
+        source="";
+        return ;
+    }
+    
     normalizePath(path);
 
-    return scheme + "://" + authority + path;
+    
+    source= scheme + "://" + authority + path;
 }
 
-
-// relativeURL
+// relative ()
 void Normalizer::relativeURL(string & source){
     if(seedLink=="empty"){
         cout<<"Seed link is not valid or relative";
         return ;
     }
-    if(source[0]=='/')source=source.substr(1,source.size()-1);
-    source=seedLink+source;
+    if (source.rfind("mailto:", 0) == 0 ||
+    source.rfind("tel:", 0) == 0 ||
+    source.rfind("javascript:", 0) == 0 ||
+    source.rfind("data:", 0) == 0){
+        source = "";
+        return;
+    }
+
+    if (!source.empty() && source[0] == '/')
+        source.erase(0, 1);
+
+    source = seedLink +"/"+ source;
     
    
 

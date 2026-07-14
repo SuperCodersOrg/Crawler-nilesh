@@ -25,7 +25,7 @@ void Crawler::crawl(string seed,int deep=0){
     links=htmlparser.parseHtml(html);
     for(int i=0;i<links.size();i++){
         normalizer.normalize(links[i]);
-        if(!frontier.exists(links[i])){
+        if( !links[i].empty() && !frontier.exists(links[i])){
             frontier.put(links[i],deep+1);
             cout<<links[i]<<endl;
         }
@@ -38,5 +38,6 @@ void Crawler::crawl(string seed,int deep=0){
 
 int main(){
     Crawler c;
-    c.crawl("https://en.wikipedia.org/wiki/Computer");
+    c.crawl("https://nileshsahu.in");
+    
 }

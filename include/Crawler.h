@@ -3,6 +3,7 @@
 #include "Normalizer.h"
 #include "../CDP/CDPScraper.h"
 #include "HtmlParser.h"
+#include "PageStorage.h"
 
 
 
@@ -14,6 +15,7 @@ class Crawler{
     Normalizer normalizer;
     CDPScraper fetch;
     HtmlParser htmlparser;
+    PageStorage pages;
 
     public:
     Crawler();

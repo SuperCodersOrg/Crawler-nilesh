@@ -160,7 +160,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=cdp_scraper
+CMAKE_PROJECT_NAME:STATIC=crawler
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -290,6 +290,15 @@ cdp_scraper_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 cdp_scraper_SOURCE_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler
+
+//Value Computed by CMake
+crawler_BINARY_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/build
+
+//Value Computed by CMake
+crawler_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+crawler_SOURCE_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler
 
 //The directory containing a CMake configuration file for ixwebsocket.
 ixwebsocket_DIR:PATH=C:/msys64/ucrt64/lib/cmake/ixwebsocket

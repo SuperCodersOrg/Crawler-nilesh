@@ -52,6 +52,14 @@ build CMakeFiles/Crawler.dir/Database.cpp.obj: CXX_COMPILER__Crawler_unscanned_ 
   OBJECT_FILE_DIR = CMakeFiles\Crawler.dir
   TARGET_SUPPORT_DIR = CMakeFiles\Crawler.dir
 
+build CMakeFiles/Crawler.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/test.cpp.obj: CXX_COMPILER__Crawler_unscanned_ D$:/CodeQuotient/Project/Project$ 2$ -$ Crawler/Web_crawler/test.cpp || cmake_object_order_depends_target_Crawler
+  DEP_FILE = CMakeFiles\Crawler.dir\D_\CodeQuotient\Project\Project_2_-_Crawler\Web_crawler\test.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/Program Files/MySQL/MySQL Server 8.0/include"
+  OBJECT_DIR = CMakeFiles\Crawler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Crawler.dir\D_\CodeQuotient\Project\Project_2_-_Crawler\Web_crawler
+  TARGET_SUPPORT_DIR = CMakeFiles\Crawler.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Crawler
@@ -60,7 +68,7 @@ build CMakeFiles/Crawler.dir/Database.cpp.obj: CXX_COMPILER__Crawler_unscanned_ 
 #############################################
 # Link the executable Crawler.exe
 
-build Crawler.exe: CXX_EXECUTABLE_LINKER__Crawler_ CMakeFiles/Crawler.dir/Database.cpp.obj
+build Crawler.exe: CXX_EXECUTABLE_LINKER__Crawler_ CMakeFiles/Crawler.dir/Database.cpp.obj CMakeFiles/Crawler.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/test.cpp.obj
   LINK_LIBRARIES = -llibmysql  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/PROGRA~1/MySQL/MYSQLS~1.0/lib
   OBJECT_DIR = CMakeFiles\Crawler.dir

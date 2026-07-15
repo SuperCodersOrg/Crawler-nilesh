@@ -1,20 +1,15 @@
+#include "../include/Database.h"
+
 #include <iostream>
-#include <string>
-#include <mysql.h>
 
 using namespace std;
 
+Database::Database() {
+    conn = mysql_init(nullptr);
 
-class Database{
-    public:
-    MYSQL *conn;
-    Database(){
-        conn = mysql_init(nullptr);
-
-    if (conn == nullptr)
-    {
+    if (conn == nullptr) {
         cout << "mysql_init() failed" << endl;
-        
+        return;
     }
 
     if (!mysql_real_connect(
@@ -30,84 +25,101 @@ class Database{
         cout << "Connection Failed" << endl;
         cout << mysql_error(conn) << endl;
         mysql_close(conn);
+        conn = nullptr;
+        return;
     }
 
     cout << "Database Connected Successfully" << endl;
+}
 
+bool Database::putRecord(string &url,
+                         string &html,
+                         int depth)
+{
+    string query =
+        "INSERT INTO pages(url, depth, html) VALUES('"
+        + url + "',"
+        + to_string(depth)
+        + ",'"
+        + html
+        + "')";
+
+    if (mysql_query(conn, query.c_str())) {
+        cout << "Insert Error : " << mysql_error(conn) << endl;
+        return false;
     }
 
-    bool putRecord(string & url,string & html,int depth,string lastCrawl){
-        string query =
-            "INSERT INTO pages(url, depth, html, last_crawl) VALUES('"
-            + url + "',"
-            + to_string(depth)
-            + ",'"
-            + html
-            + "','"
-            + lastCrawl
-            + "')";
-        if (mysql_query(conn, query.c_str())){
-            cout << "Insert Error : " << mysql_error(conn) << endl;
-            return false;
-        }
-        return true;
+    return true;
+}
+
+bool Database::get(const string &url,
+                   int &depth,
+                   string &html,
+                   string &lastCrawl)
+{
+    string query =
+        "SELECT depth, html, last_crawl FROM pages WHERE url='"
+        + url +
+        "' LIMIT 1";
+
+    if (mysql_query(conn, query.c_str())) {
+        cout << "Select Error : " << mysql_error(conn) << endl;
+        return false;
     }
-    bool get(const string &url,int &depth,string &html,string &lastCrawl){
-        string query ="SELECT depth, html, last_crawl FROM pages WHERE url='"+ url + "' LIMIT 1";
-        if (mysql_query(conn, query.c_str())){
-            cout << "Select Error : " << mysql_error(conn) << endl;
-            return false;
-        }
-        MYSQL_RES *result = mysql_store_result(conn);
 
-        if (result == nullptr)
-            return false;
+    MYSQL_RES *result = mysql_store_result(conn);
 
-        MYSQL_ROW row = mysql_fetch_row(result);
+    if (result == nullptr)
+        return false;
 
-        if (row == nullptr)
-        {
-            mysql_free_result(result);
-            return false;
-        }
+    MYSQL_ROW row = mysql_fetch_row(result);
 
-        depth = row[0] ? stoi(row[0]) : 0;
-        html = row[1] ? row[1] : "";
-        lastCrawl = row[2] ? row[2] : "";
-
+    if (row == nullptr) {
         mysql_free_result(result);
-
-        return true;
+        return false;
     }
 
-    string getHtml(string &url){
-        string html,last;
-        int depth;
-        get(url,depth,html,last);
-        return html;
-    }
+    depth = row[0] ? stoi(row[0]) : 0;
+    html = row[1] ? row[1] : "";
+    lastCrawl = row[2] ? row[2] : "";
 
-    int getDepth(string &url){
-        string html,last;
-        int depth;
-        get(url,depth,html,last);
-        return depth;
-    }
-    
-    string getLastCrawl(string &url){
-        string html,last;
-        int depth;
-        get(url,depth,html,last);
-        return last;
-    }
-    ~Database(){
-        if(conn)
-            mysql_close(conn);
-    }
+    mysql_free_result(result);
 
-};
+    return true;
+}
 
-int main(){
-    Database d;
-    
+string Database::getHtml(string &url)
+{
+    string html, last;
+    int depth;
+
+    get(url, depth, html, last);
+
+    return html;
+}
+
+int Database::getDepth(string &url)
+{
+    string html, last;
+    int depth;
+
+    get(url, depth, html, last);
+
+    return depth;
+}
+
+string Database::getLastCrawl(string &url)
+{
+    string html, last;
+    int depth;
+
+    get(url, depth, html, last);
+
+    return last;
+}
+
+Database::~Database()
+{
+    if (conn)
+        mysql_close(conn);
 }

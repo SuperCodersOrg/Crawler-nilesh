@@ -29,8 +29,6 @@ void Crawler::crawl(string seed,int deep=0){
             normalizer.normalize(link);
             if(link.empty()) continue;
 
-           
-
             if(visited.exists(link)){
                 cout << "Already visited\n" << link << endl;
                 continue;
@@ -49,6 +47,7 @@ void Crawler::crawl(string seed,int deep=0){
                     
                 }
             }
+            pages.storePage(link,html,linkDepth);
             cout<<"Total links: "<<links.size()<<endl;
         }
         catch(const std::exception& e){
@@ -58,7 +57,13 @@ void Crawler::crawl(string seed,int deep=0){
 }
 
 int main(){
-    Crawler c;
-    c.crawl("https://google.com", 0);
+    cout << "Main Started\n";
 
+    Crawler c;
+
+    cout << "Crawler Created\n";
+
+    c.crawl("https://nileshsahu.in", 0);
+
+    cout << "Finished\n";
 }

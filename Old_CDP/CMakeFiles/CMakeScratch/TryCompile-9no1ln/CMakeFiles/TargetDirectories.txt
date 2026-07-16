@@ -1,3 +1,0 @@
-D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/CDP/CMakeFiles/CMakeScratch/TryCompile-9no1ln/CMakeFiles/cmTC_b2e26.dir
-D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/CDP/CMakeFiles/CMakeScratch/TryCompile-9no1ln/CMakeFiles/edit_cache.dir
-D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/CDP/CMakeFiles/CMakeScratch/TryCompile-9no1ln/CMakeFiles/rebuild_cache.dir

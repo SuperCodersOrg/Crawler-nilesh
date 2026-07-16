@@ -6,7 +6,7 @@
 class Database {
 private:
 
-    MYSQL *conn;
+    
 public:
     Database();
     ~Database();

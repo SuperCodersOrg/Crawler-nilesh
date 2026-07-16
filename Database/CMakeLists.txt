@@ -1,26 +1,23 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(WebCrawler)
+project(DatabaseTest)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Crawler
-    Database.cpp
-    ../test.cpp
+add_executable(DatabaseTest
+    main.cpp
+    ../src/PageStorage.cpp
 )
 
-# MySQL include path
-target_include_directories(Crawler PRIVATE
+target_include_directories(DatabaseTest PRIVATE
+    ../include
     "C:/Program Files/MySQL/MySQL Server 8.0/include"
 )
 
-# MySQL library path
-target_link_directories(Crawler PRIVATE
+target_link_directories(DatabaseTest PRIVATE
     "C:/Program Files/MySQL/MySQL Server 8.0/lib"
 )
 
-# Link MySQL client library
-target_link_libraries(Crawler PRIVATE
-    libmysql
-)
+target_link_libraries(DatabaseTest PRIVATE
+    libmysql)

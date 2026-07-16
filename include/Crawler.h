@@ -10,6 +10,7 @@
 class Crawler{
     private:
     int depth;
+    void loop(std::string url,std::string seedHtml, int seedId);
     Set<std::string>visited;
     Frontier frontier;
     Normalizer normalizer;

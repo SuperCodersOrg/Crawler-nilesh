@@ -8,85 +8,130 @@ Crawler::Crawler(){
 }
 
 void Crawler:: Continue(){
-    string url=pages.getLastURL();
-        if(url=="null"){
-            cout<<"Last Url not found";
-            return ;
-        }
-        int d=pages.getDepth(url);
+    
+    string url;
+    int deep;
+    int id;
+    int max;
+    pages.getLastFrontier(url,deep,id,max);
+
+    if(url=="null"){
+        cout<<"Last Url not found";
+        return ;
+    }
         frontier.backup();
-        cout<<"Continuing from last url: "<<url<<"\nDepth: "<<d<<endl;
-        crawl(url,d);
+        normalizer.seedLink=url;
+        depth=max;
+        cout<<"Continuing from last url: "<<url<<"\nDepth: "<<deep<<endl;
+        string html=fetch.getHtml(url);
+        loop(url,html,id);
         cout<<"Finished\n";
 }
 
-void Crawler::crawl(string seed,int deep=2){
-    depth=deep;
+void Crawler::loop(string seed,string seedHtml,int seedId){
 
-    if(normalizer.isrelative(seed)){
-        cout<<"Source link is invalid or relative"<<endl;
-        return;
-    }
-    normalizer.seedLink = seed;
-
-    frontier.put(seed, 0);
-    size_t i=0;
-    while(!frontier.empty()){
-        cout<<"-------------------------------------------------------------\n";
-        cout<<"-------------------------------------------------------------\n";
-        cout<<"Next Url :"<<frontier.getLink()<<endl;
-        cout<<"Depth: "<<frontier.getDepth()<<endl;
-        cout<<"Count: "<<i<<endl;
-       
+    size_t count=0;
+    while (!frontier.empty()){
+        cout << "-------------------------------------------------------------\n";
+        cout << "Next Url : " << frontier.getLink() << endl;
+        cout << "Depth    : " << frontier.getDepth() << endl;
+        cout << "Count    : " << count << endl;
 
         string link = frontier.getLink();
         int linkDepth = frontier.getDepth();
+        normalizer.seedLink=link;
+
         frontier.pop();
+        if (frontier.empty()){
+            if(pages.clearFrontier())cout<<"Frontier Empty\n";
+        }
+
         
-        try{
-            if(linkDepth > depth){ 
-                cout<<"Depth Reached!\n";
+
+        try
+        {
+            if (linkDepth > depth)
+            {
+                cout << "Depth Reached!\n";
                 continue;
             }
-            
+
             normalizer.normalize(link);
-            if(link.empty()){
-                continue;
-            } 
 
-            if(visited.exists(link)){
-                cout << "Already visited\n" << link << endl;
+            if (link.empty())
+                continue;
+
+            if (visited.exists(link))
+            {
+                cout << "Already Visited : " << link << endl;
                 continue;
             }
 
-            string html = fetch.getHtml(link);
+            string html;
+
+            // Seed page ka HTML pehle hi fetch ho chuka hai
+            if (link == seed)
+                html = seedHtml;
+            else
+                html = fetch.getHtml(link);
 
             visited.insert(link);
-           
-           
 
             DynamicArray<string> links = htmlparser.parseHtml(html);
-    
-            for(int i = 0; i < links.size(); i++){
+
+            for (int i = 0; i < links.size(); i++)
+            {
                 normalizer.normalize(links[i]);
-                if(!links[i].empty() && !visited.exists(links[i])){
-                    frontier.put(links[i], linkDepth + 1);
-                    
+
+                if (!links[i].empty() && !visited.exists(links[i]))
+                {
+                    frontier.put(links[i], linkDepth + 1,depth,seedId);
                 }
             }
-            pages.storePage(link,html,linkDepth);
 
-            cout<<"Total links: "<<links.size()<<endl;
+            // Don't insert Seed page into pages table 
+            if (linkDepth != 0)
+            {
+                pages.storePage(link, html, linkDepth,seedId);
+            }
+            
+
+            cout << "Total links : " << links.size() << endl;
         }
-        catch(const std::exception& e){
+        catch (const std::exception &e)
+        {
             cout << "Failed : " << link << endl;
             cout << e.what() << endl;
-            continue;
         }
-        i++;
+
+        count++;
     }
+
 }
 
+void Crawler::crawl(std::string seed, int deep)
+{
+    depth = deep;
+
+    if (normalizer.isrelative(seed))
+    {
+        cout << "Source link is invalid or relative" << endl;
+        return;
+    }
+
+    
+
+    // Fetch seed page
+    string seedHtml = fetch.getHtml(seed);
+
+    // Insert only into seeds table
+    int seedId=frontier.putSeed(seed, seedHtml, deep);
+
+    
+
+    loop(seed,seedHtml,seedId);
+    
+}
 int main(){
     cout << "Main Started\n";
 
@@ -100,7 +145,7 @@ int main(){
     int depth,size;
 
     int choice;
-    cout<<"1. Continue crawler?\n2. Start from a seed link\n";
+    cout<<"1. Continue crawler?\n2. Start from a seed link?\n";
     cin>>choice;
     if(choice==1){
         c.Continue();

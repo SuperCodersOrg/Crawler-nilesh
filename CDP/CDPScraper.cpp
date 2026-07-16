@@ -154,7 +154,7 @@ json CDPScraper::CDPClient::waitForResult(int id, int timeoutMs) {
     bool gotResult = cv_.wait_for(lk, chrono::milliseconds(timeoutMs),
                                    [this, id] { return results_.count(id) > 0; });
     if (!gotResult) {
-        throw runtime_error("CDP response ka wait karte hue timeout ho gaya (id=" + to_string(id) + ")");
+        throw runtime_error("CDP response timeout ho waiting for response (id=" + to_string(id) + ")");
     }
     json result = results_[id];
     results_.erase(id);
@@ -166,7 +166,7 @@ json CDPScraper::CDPClient::waitForEvent(const string& method, int timeoutMs) {
     bool gotEvent = cv_.wait_for(lk, chrono::milliseconds(timeoutMs),
                                   [this, &method] { return events_.count(method) > 0; });
     if (!gotEvent) {
-        throw runtime_error("Event ka wait karte hue timeout ho gaya: " + method);
+        throw runtime_error("Event wait timeout : " + method);
     }
     json event = events_[method];
     events_.erase(method);

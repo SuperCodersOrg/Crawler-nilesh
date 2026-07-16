@@ -113,7 +113,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Craw
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/WebCrawler
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/DatabaseTest
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/msys64/ucrt64/bin/ld.exe
@@ -160,7 +160,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=WebCrawler
+CMAKE_PROJECT_NAME:STATIC=DatabaseTest
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -249,13 +249,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-WebCrawler_BINARY_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database/build
+DatabaseTest_BINARY_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database/build
 
 //Value Computed by CMake
-WebCrawler_IS_TOP_LEVEL:STATIC=ON
+DatabaseTest_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-WebCrawler_SOURCE_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database
+DatabaseTest_SOURCE_DIR:STATIC=D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database
 
 
 ########################

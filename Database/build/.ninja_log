@@ -1,8 +1,4 @@
 # ninja log v7
-10	2290	8057379691880953	CMakeFiles/Crawler.dir/Database.cpp.obj	9e101b5bd9832df9
-2291	2620	8057379714692239	Crawler.exe	df0e9d9a770aa973
-18	680	8057930621676846	build.ninja	e54a59cddb91f2eb
-18	680	8057930621676846	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database/build/cmake_install.cmake	e54a59cddb91f2eb
-73	6136	8057930623365449	CMakeFiles/Crawler.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/test.cpp.obj	9a97d79acef24e29
-16	6243	8057930622782298	CMakeFiles/Crawler.dir/Database.cpp.obj	9e101b5bd9832df9
-6244	6964	8057930685056188	Crawler.exe	64dc74f5aa772315
+34	6849	8059087745395946	CMakeFiles/DatabaseTest.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj	3f34bcbd7141cea7
+8	7866	8059087745139887	CMakeFiles/DatabaseTest.dir/main.cpp.obj	82e8a25eddac1dfc
+7866	17073	8059087823723006	DatabaseTest.exe	1474153e53895c78

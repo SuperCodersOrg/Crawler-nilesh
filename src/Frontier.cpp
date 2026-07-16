@@ -6,20 +6,21 @@
 using namespace std;
 
 // put(link and depth)
-void Frontier::put(string & link,int deep){
+void Frontier::put(string & link,int deep,int max,int Id){
     URL url;
     url.link=link;
     url.depth=deep;
-    database.putFrontier(link,deep);
+    pages.putFrontier(link,deep,max,Id);
     queue.push(url);
 }
 // put(link,depth and maxDepth)
-void Frontier::putSeed(string & link,string & html,int deep=0,int max){
+size_t Frontier::putSeed(string & link,string & html,int max,int deep){
     URL url;
     url.link=link;
     url.depth=deep;
     queue.push(url);
-    database.putSeed(link,html,deep,max);  
+    return pages.putSeeds(link,html,deep,max);
+    
     
 }
 
@@ -28,23 +29,34 @@ Frontier :: URL Frontier::pop(){
     URL url=queue.front();
     string link=url.link;
     int depth=url.depth;
-    database.deleteFrontier(link,depth);
+    pages.deleteFrontier(link,depth);
     return queue.pop();
 
 }
 
-void Frontier::backup(){
-    string link;
-    int depth;
-    database.getFrontier(link,depth);
-    while(link!="null"){
-        URL url;
-        url.depth=depth;
-        url.link=link;
-        queue.push(url);
-        database.getFrontier(link,depth);
-    }
+void Frontier::backup()
+{
+    string link = "null";
+    int depth = 0;
+    cout<<"Backup called\n";
 
+    while (true)
+    {
+        cout<<"inside while\n";
+        pages.getFrontier(link, depth);
+
+        if (link == "null"){
+
+            cout<<"Break\n";
+                break;
+        }
+
+        URL url;
+        url.link = link;
+        url.depth = depth;
+        queue.push(url);
+        pages.deleteFrontier(link, depth);
+    }
 }
 
 // getLink()

@@ -17,7 +17,6 @@ add_executable(crawler
     src/Frontier.cpp
     src/HtmlParser.cpp
     src/Normalizer.cpp
-    Database/Database.cpp
     src/PageStorage.cpp
     CDP/CDPScraper.cpp
 )

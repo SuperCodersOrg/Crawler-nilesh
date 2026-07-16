@@ -3,7 +3,7 @@
 
 
 template<typename V>
-class set{
+class Set{
     private:
     HashMap<V,bool>map;
 

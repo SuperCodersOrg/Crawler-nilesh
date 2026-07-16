@@ -23,6 +23,10 @@ string Frontier::getLink(){
     url=queue.front();
     return url.link;
 }
+// getLink()
+size_t Frontier::getSize(){
+    return queue.size();
+}
 
 // empty()
 bool Frontier::empty(){

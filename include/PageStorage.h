@@ -23,7 +23,7 @@ public:
                  string &lastCrawl);
 
     string getHtml(string &url);
-
+    
     int getDepth(string &url);
 
     string getLastCrawl(string &url);

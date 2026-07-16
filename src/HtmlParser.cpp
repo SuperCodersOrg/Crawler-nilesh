@@ -7,7 +7,7 @@ size_t HtmlParser ::parseHttp(const string &html,size_t start){
     size_t index=start;
     while(index<html.size()){
         char c=html[index];
-        if(c=='\'' || c=='"' || c==')' || c==';'){
+        if(c=='\'' || c=='"' || c==')' || c==';' || c=='<'|| c==' '){
             links.push_back(html.substr(start,index-start));
             return index;
         }
@@ -36,7 +36,7 @@ size_t HtmlParser::parseHref(const string &html,size_t start){
             size_t first=index;
             while(index<html.size()){
                 char d=html[index];
-                if(d=='"' || d=='\'' || d==')' || d==';'){
+                if(d=='"' || d=='\'' || d==')' || d==';'|| d=='<'|| d==' '){
                     links.push_back(html.substr(first,index-first));
                     return index;
                 }

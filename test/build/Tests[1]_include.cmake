@@ -1,0 +1,5 @@
+if(EXISTS "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests[1]_tests.cmake")
+  include("D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests[1]_tests.cmake")
+else()
+  add_test(Tests_NOT_BUILT Tests_NOT_BUILT)
+endif()

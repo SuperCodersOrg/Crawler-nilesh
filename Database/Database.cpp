@@ -1,5 +1,5 @@
 #include "../include/Database.h"
-
+#include <cstring>
 #include <iostream>
 
 using namespace std;
@@ -36,18 +36,67 @@ bool Database::putRecord(string &url,
                          string &html,
                          int depth)
 {
-    string query =
-        "INSERT INTO pages(url, depth, html) VALUES('"
-        + url + "',"
-        + to_string(depth)
-        + ",'"
-        + html
-        + "')";
+    const char *query =
+        "INSERT INTO pages(url, depth, html) VALUES(?, ?, ?)";
 
-    if (mysql_query(conn, query.c_str())) {
-        cout << "Insert Error : " << mysql_error(conn) << endl;
+    MYSQL_STMT *stmt = mysql_stmt_init(conn);
+
+    if (stmt == nullptr)
+    {
+        cout << "Statement initialization failed" << endl;
         return false;
     }
+
+    if (mysql_stmt_prepare(stmt, query, strlen(query)))
+    {
+        cout << "Prepare Error : "
+             << mysql_stmt_error(stmt) << endl;
+
+        mysql_stmt_close(stmt);
+        return false;
+    }
+
+    MYSQL_BIND bind[3];
+    memset(bind, 0, sizeof(bind));
+
+    unsigned long urlLength = url.length();
+    unsigned long htmlLength = html.length();
+
+    // URL
+    bind[0].buffer_type = MYSQL_TYPE_STRING;
+    bind[0].buffer = (char *)url.c_str();
+    bind[0].buffer_length = urlLength;
+    bind[0].length = &urlLength;
+
+    // Depth
+    bind[1].buffer_type = MYSQL_TYPE_LONG;
+    bind[1].buffer = &depth;
+
+    // HTML
+    bind[2].buffer_type = MYSQL_TYPE_STRING;
+    bind[2].buffer = (char *)html.c_str();
+    bind[2].buffer_length = htmlLength;
+    bind[2].length = &htmlLength;
+
+    if (mysql_stmt_bind_param(stmt, bind))
+    {
+        cout << "Bind Error : "
+             << mysql_stmt_error(stmt) << endl;
+
+        mysql_stmt_close(stmt);
+        return false;
+    }
+
+    if (mysql_stmt_execute(stmt))
+    {
+        cout << "Execute Error : "
+             << mysql_stmt_error(stmt) << endl;
+
+        mysql_stmt_close(stmt);
+        return false;
+    }
+
+    mysql_stmt_close(stmt);
 
     return true;
 }
@@ -90,10 +139,12 @@ bool Database::get(const string &url,
 
 string Database::getHtml(string &url)
 {
-    string html, last;
+    string html;
+    string last;
     int depth;
 
-    get(url, depth, html, last);
+    if (!get(url, depth, html, last))
+        return "";
 
     return html;
 }
@@ -101,19 +152,23 @@ string Database::getHtml(string &url)
 int Database::getDepth(string &url)
 {
     string html, last;
-    int depth;
+    int depth = -1;
 
-    get(url, depth, html, last);
+    if (!get(url, depth, html, last))
+        return -1;
 
     return depth;
 }
 
+
 string Database::getLastCrawl(string &url)
 {
-    string html, last;
+    string html;
+    string last;
     int depth;
 
-    get(url, depth, html, last);
+    if (!get(url, depth, html, last))
+        return "";
 
     return last;
 }

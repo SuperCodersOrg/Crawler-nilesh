@@ -1,0 +1,118 @@
+{
+  "tests": 20,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "PageStorageTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "StorePage",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 23
+        },
+        {
+          "name": "GetPage",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 31
+        },
+        {
+          "name": "GetHtml",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 51
+        },
+        {
+          "name": "GetDepth",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 59
+        },
+        {
+          "name": "GetLastCrawl",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 67
+        },
+        {
+          "name": "InvalidPageLookup",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 74
+        },
+        {
+          "name": "InvalidHtml",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 92
+        },
+        {
+          "name": "InvalidDepth",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 102
+        },
+        {
+          "name": "InvalidLastCrawl",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 112
+        },
+        {
+          "name": "MultiplePages",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/PageStorageTests.cpp",
+          "line": 122
+        }
+      ]
+    },
+    {
+      "name": "DatabaseTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "PutRecord",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 29
+        },
+        {
+          "name": "GetExistingRecord",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 37
+        },
+        {
+          "name": "GetHtml",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 57
+        },
+        {
+          "name": "GetDepth",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 65
+        },
+        {
+          "name": "GetLastCrawl",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 73
+        },
+        {
+          "name": "GetNonExistingRecord",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 80
+        },
+        {
+          "name": "GetHtmlForInvalidURL",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 98
+        },
+        {
+          "name": "GetDepthForInvalidURL",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 108
+        },
+        {
+          "name": "GetLastCrawlForInvalidURL",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 118
+        },
+        {
+          "name": "MultipleInsertions",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/DatabaseTest.cpp",
+          "line": 128
+        }
+      ]
+    }
+  ]
+}

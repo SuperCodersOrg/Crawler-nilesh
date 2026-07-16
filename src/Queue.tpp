@@ -18,7 +18,7 @@ T Queue<T>::pop(){
 
 // size()
 template<typename T>
-int Queue<T>::size(){
+size_t Queue<T>::size(){
     
     return queue.length();
 }

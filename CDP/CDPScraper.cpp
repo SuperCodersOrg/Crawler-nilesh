@@ -72,7 +72,8 @@ string CDPScraper::httpGet(const string& url) {
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
-        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5L);
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 2L);
         curl_easy_perform(curl);
         curl_easy_cleanup(curl);
     }
@@ -102,7 +103,8 @@ string CDPScraper::httpDelete(const string& url) {
         curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "DELETE");
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
-        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10L);
+        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5L);
+        curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 2L);
         curl_easy_perform(curl);
         curl_easy_cleanup(curl);
     }
@@ -419,7 +421,7 @@ string CDPScraper::getHtml(const string& url) {
         client.resetNetworkCounters();
 
         client.waitForResult(client.send("Page.navigate", {{"url", url}}));
-        client.waitForEvent("Page.loadEventFired", 60000);
+        client.waitForEvent("Page.loadEventFired", 5000);
 
         // Blind fixed sleep ki jagah: jab tak network requests khatam
         // (ya maxWaitSeconds_ ka cap) na ho jaaye, tab tak wait karo.

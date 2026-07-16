@@ -3,32 +3,32 @@
 
 // insert()
 template<typename V>
-void set<V>::insert(V val){
+void Set<V>::insert(V val){
     map.insert(val,true);
 }
 
 // exists()
 template<typename V>
-bool set<V>::exists(V val){
+bool Set<V>::exists(V val){
     return map.exists(val);
 }
 
 // remove()
 template<typename V>
-void set<V>::remove(V val){
+void Set<V>::remove(V val){
     map.remove(val);
 }
 
 // size()
 template<typename V>
-size_t set<V>::size(){
+size_t Set<V>::size(){
     return map.size();
 }
 
 
 // getAll()
 template<typename V>
-DynamicArray<V> set<V>::getAll(){
+DynamicArray<V> Set<V>::getAll(){
     DynamicArray<V>get;
     get=map.getkeys();
     return get;
@@ -36,6 +36,6 @@ DynamicArray<V> set<V>::getAll(){
 
 // clear()
 template<typename V>
-void set<V>::clear(){
+void Set<V>::clear(){
     map.clear();
 }

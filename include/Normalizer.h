@@ -19,8 +19,8 @@ class Normalizer{
     
     
     public:
-    set<string>ignoreExtension;
-    set<string>ignoreDomain;
+    Set<string>ignoreExtension;
+    Set<string>ignoreDomain;
     bool isrelative(string &source);
     string seedLink;
     Normalizer();

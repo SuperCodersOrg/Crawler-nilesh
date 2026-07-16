@@ -1,0 +1,24 @@
+# ninja log v7
+8	802	8058186489637083	build.ninja	2da4b5d280c31512
+8	802	8058186489207026	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/cmake_install.cmake	2da4b5d280c31512
+8	802	8058186489322373	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/CTestTestfile.cmake	2da4b5d280c31512
+29	4068	8058131756303628	CMakeFiles/DatabaseTests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj	18d865ab7fd86ad0
+7	4056	8058125152048424	CMakeFiles/DatabaseTests.dir/DatabaseTest.cpp.obj	ab27d608183b3e1a
+23115	23995	8058144055635859	DatabaseTests.exe	62215cdfb80f6be0
+23115	23995	8058144055635859	DatabaseTests[1]_tests.cmake	62215cdfb80f6be0
+23115	23995	8058144055635859	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/DatabaseTests[1]_tests.cmake	62215cdfb80f6be0
+46	22703	8058143816613716	CMakeFiles/DatabaseTests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj	a4f891400f1bc63d
+17	23114	8058143816328314	CMakeFiles/DatabaseTests.dir/PageStorageTests.cpp.obj	f2256ff8bbe9ada9
+139	5716	8058146097090987	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj	b1b3affe6d459779
+90	5778	8058146096569691	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj	40fa2d93fa886da1
+10	7294	8058146095741186	CMakeFiles/Tests.dir/DatabaseTest.cpp.obj	8afdc9099bd3cff3
+46	7327	8058146096098609	CMakeFiles/Tests.dir/PageStorageTests.cpp.obj	b2d9f09a3a6f4aa4
+3378	4636	8058185439089804	Tests.exe	16744093ced16bd5
+3378	4636	8058185439089804	Tests[1]_tests.cmake	16744093ced16bd5
+3378	4636	8058185439089804	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests[1]_tests.cmake	16744093ced16bd5
+142	2705	8058180429331051	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/Normalizer.cpp.obj	c6b7ff265ce8dc50
+72	5269	8058180428619020	CMakeFiles/Tests.dir/NormalizerTests.cpp.obj	f76848876329e987
+25	3376	8058185393220241	CMakeFiles/Tests.dir/QueueTests.cpp.obj	4e1714405d7aabd5
+11	1093	8058186489637083	build.ninja	2da4b5d280c31512
+11	1093	8058186489637083	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/cmake_install.cmake	2da4b5d280c31512
+11	1093	8058186489637083	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/CTestTestfile.cmake	2da4b5d280c31512

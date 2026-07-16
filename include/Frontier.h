@@ -16,15 +16,13 @@ class Frontier{
     string getDate();
     Queue<URL>queue;
     
-    
-    
     public:
-    
     void put(string& link,int depth);
     URL pop();
     bool empty();
     string getLink();
     int getDepth();
+    size_t getSize();
     
     
 };

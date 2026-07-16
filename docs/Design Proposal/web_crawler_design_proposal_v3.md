@@ -1,4 +1,4 @@
-# Web Crawler Design Proposal - Version 2
+# Web Crawler Design Proposal - Version 3
 
 ## Overview
 
@@ -44,7 +44,7 @@ Coordinates the complete crawling process by downloading pages, parsing links, m
 
 ```cpp
 class Frontier{
-    private:
+
     struct URL{
         string link;
         int depth;
@@ -52,19 +52,13 @@ class Frontier{
     };
     string getDate();
     Queue<URL>queue;
-    set<string>visited;
-    
     
     public:
-    bool exists(string link);
     void put(string& link,int depth);
     URL pop();
     bool empty();
     string getLink();
     int getDepth();
-    
-    
-
 };
 ```
 
@@ -111,26 +105,25 @@ Extracts hyperlinks from the rendered HTML document.
 class PageStorage
 {
 private:
-    sqlite3* db;
+    Database d;
 
 public:
     PageStorage();
 
-    bool openDatabase(const string& databaseName);
-
-    bool storePage(const string& url,
-                   const string& html,
+    bool storePage(string &url,
+                   string &html,
                    int depth);
 
-    string getPage(const string& url);
+    bool getPage(string &url,
+                 int &depth,
+                 string &html,
+                 string &lastCrawl);
 
-    bool hasPage(const string& url);
+    string getHtml(string &url);
 
-    int pageCount() const;
+    int getDepth(string &url);
 
-    void closeDatabase();
-
-    ~PageStorage();
+    string getLastCrawl(string &url);
 };
 ```
 
@@ -159,7 +152,7 @@ The modular design improves readability, testing, and future extensibility. Sinc
 
 Uses a custom Queue.
 
-![Queue](images/Queue.jpg)
+![Queue](images/Queue.png)
 
 The queue stores URLs in FIFO order.
 
@@ -169,9 +162,7 @@ The queue stores URLs in FIFO order.
 
 Uses **Chrome DevTools Protocol (CDP)** to communicate with a headless Chrome browser.
 
-```
-**Diagram**
-```
+![CDP](images/CDP.png)
 
 This enables crawling of JavaScript-heavy websites where the original HTTP response does not contain the complete page content.
 
@@ -181,7 +172,7 @@ This enables crawling of JavaScript-heavy websites where the original HTTP respo
 
 Uses a custom HashMap.
 
-![Visited](images/Visited.jpg)
+![Visited](images/Visited.png)
 
 The HashMap provides fast duplicate detection before downloading a page.
 
@@ -189,7 +180,7 @@ The HashMap provides fast duplicate detection before downloading a page.
 
 ## Page Storage
 
-Uses an **SQLite** database for persistent storage.
+Uses an **MySQL** database for persistent storage.
 
 Each database record contains:
 
@@ -197,7 +188,7 @@ Each database record contains:
 - Rendered HTML
 - Crawling Depth
 
-SQLite preserves downloaded pages across multiple executions and provides efficient retrieval based on the stored URL.
+MtSQL preserves downloaded pages across multiple executions and provides efficient retrieval based on the stored URL.
 
 ---
 
@@ -243,79 +234,123 @@ Empty HTML documents are stored successfully, although no hyperlinks are extract
 
 ## Frontier
 
-Implemented using a Queue.
+Implemented using a custom **Queue**.
 
 | Operation | Best | Average | Worst | Reason |
 |-----------|:----:|:-------:|:-----:|--------|
-| `push()` | O(1) | O(1) | O(1) | Inserts at the rear of the queue. |
-| `pop()` | O(1) | O(1) | O(1) | Removes the front element. |
-| `front()` | O(1) | O(1) | O(1) | Returns the front element. |
-| `empty()` | O(1) | O(1) | O(1) | Checks whether the queue is empty. |
+| `push()` | O(1) | O(1) | O(1) | Inserts a URL at the rear of the queue. |
+| `pop()` | O(1) | O(1) | O(1) | Removes the URL from the front of the queue. |
+| `front()` | O(1) | O(1) | O(1) | Returns the front URL without removing it. |
+| `empty()` | O(1) | O(1) | O(1) | Checks whether the frontier is empty. |
 | `size()` | O(1) | O(1) | O(1) | Returns the maintained queue size. |
 
 ---
 
-## Downloader
+## Downloader (Chrome DevTools Protocol)
 
 | Operation | Best | Average | Worst | Reason |
 |-----------|:----:|:-------:|:-----:|--------|
-| `fetch()` | O(n) | O(n) | O(n) | Runtime depends on the size of the rendered HTML document. |
+| `fetchPage()` | O(n) | O(n) | O(n) | Time depends on downloading and rendering the HTML document, where *n* is the size of the rendered HTML. |
 
 ---
 
-## HTMLParser
+## HTML Parser
 
 | Operation | Best | Average | Worst | Reason |
 |-----------|:----:|:-------:|:-----:|--------|
-| `extractLinks()` | O(n) | O(n) | O(n) | Performs a linear scan of the HTML document. |
+| `parseHtml()` | O(n) | O(n) | O(n) | Performs a single linear scan of the rendered HTML document to extract hyperlinks. |
+
+---
+
+## URL Normalizer
+
+| Operation | Best | Average | Worst | Reason |
+|-----------|:----:|:-------:|:-----:|--------|
+| `normalize()` | O(m) | O(m) | O(m) | Processes each URL by removing fragments, resolving paths, checking ignored domains/extensions, and normalizing the URL. **Here *m* is the length of the URL.** |
 
 ---
 
 ## Visited URL Store
 
+Implemented using a custom **HashMap**.
+
 | Operation | Best | Average | Worst | Reason |
 |-----------|:----:|:-------:|:-----:|--------|
-| `exists()` | O(1) | O(1) | O(n) | Average constant-time lookup; collisions increase runtime. |
-| `insert()` | O(1) | O(1) | O(n) | Rehashing or excessive collisions increase runtime. |
+| `exists()` | O(1) | O(1) | O(n) | Average constant-time lookup; excessive collisions degrade performance. |
+| `insert()` | O(1) | O(1) | O(n) | Rehashing or heavy collisions may increase runtime. |
 
 ---
 
-## Page Storage
+## Page Storage (MySQL)
 
-| Operation     |   Best   |  Average | Worst | Reason                                         |
-| ------------- | :------: | :------: | :---: | ---------------------------------------------- |
-| `storePage()` | O(log n) | O(log n) |  O(n) | Inserts a new record into the SQLite database. |
-| `getPage()`   | O(log n) | O(log n) |  O(n) | Retrieves a page using its URL index.          |
-| `hasPage()`   | O(log n) | O(log n) |  O(n) | Checks whether the URL exists in the database. |
-| `pageCount()` |   O(1)   |   O(1)   |  O(1) | Returns the total number of stored pages.      |
+| Operation | Best | Average | Worst | Reason |
+|-----------|:----:|:-------:|:-----:|--------|
+| `storePage()` | O(log n) | O(log n) | O(n) | Inserts a crawled page into the MySQL database using the indexed URL field. |
+| `getPage()` | O(log n) | O(log n) | O(n) | Retrieves the stored HTML corresponding to a URL. |
+| `getDepth()` | O(log n) | O(log n) | O(n) | Retrieves the crawl depth for a stored page. |
+| `getLastCrawl()` | O(log n) | O(log n) | O(n) | Retrieves the last crawl timestamp associated with a URL. |
+| `hasPage()` | O(log n) | O(log n) | O(n) | Checks whether a page corresponding to the given URL exists in the database. |
 
+---
 
-Here, **n** represents the size of the rendered HTML document.
+## Overall Crawling
+
+For each webpage, the crawler performs:
+
+1. Download and render the webpage using Chrome DevTools Protocol.
+2. Parse the rendered HTML to extract hyperlinks.
+3. Normalize every extracted URL.
+4. Check for duplicates using the visited URL store.
+5. Store the crawled page in the MySQL database.
+
+If a webpage contains **k** hyperlinks and the rendered HTML size is **n**, the overall processing time for one page is approximately:
+
+\[
+O(n + k)
+\]
+
+where:
+
+- **n** = size of the rendered HTML document.
+- **k** = number of hyperlinks extracted from that document.
 
 ---
 
 # Section 5 - Future Compatibility
 
-The crawler is designed using a modular architecture so that downloaded pages can be reused directly by future components such as an **Indexer**.
+The crawler is designed using a modular architecture so that future components can be integrated without modifying the core crawling logic. Responsibilities such as page downloading, URL normalization, HTML parsing, and page storage are separated into independent modules, making the system easier to extend, test, and maintain.
 
-A dedicated `PageStorage` module stores every rendered webpage independently of the crawler. Each page is stored together with its URL, rendered HTML, and crawling depth.
+The **PageStorage** module acts as an abstraction over the database layer. It stores every crawled webpage in a **MySQL** database together with its URL, rendered HTML, crawl depth, and the last crawl date. Since other modules communicate only through the `PageStorage` interface, the underlying storage implementation can be replaced without affecting the crawler.
 
-The `PageStorage` interface is shown below.
+The current `PageStorage` interface is shown below.
 
 ```cpp
-int storePage(const std::string& url,
-              const std::string& html,
-              int depth);
+bool storePage(std::string &url,
+               std::string &html,
+               int depth);
 
-std::string getPage(const std::string& url);
+std::string getPage(std::string &url);
 
-bool hasPage(const std::string& url);
+int getDepth(std::string &url);
 
-int pageCount() const;
+std::string getLastCrawl(std::string &url);
+
+bool hasPage(std::string &url);
 ```
 
-### Compatibility with the Indexer
+## Compatibility with the Indexer
 
-The Indexer only requires access to the rendered HTML pages and does not need to know how they were downloaded or rendered. Since JavaScript execution is completed before storage, the Indexer can process both static and dynamic websites without requiring any browser integration.
+The crawler stores fully rendered HTML pages after JavaScript execution using **Chrome DevTools Protocol (CDP)**. As a result, an Indexer can directly consume the stored pages without requiring a browser or JavaScript execution. This enables the Indexer to process both static and dynamic websites using the same interface.
 
-Future enhancements such as storing HTTP status codes, page titles, timestamps, metadata, compressed HTML, or replacing the storage implementation can be introduced inside the `PageStorage` module without affecting the crawler or the indexer.
+## Future Enhancements
+
+The current design allows several future improvements without changing the crawler architecture:
+
+- Incremental crawling using the `last_crawl` field to avoid downloading recently crawled pages.
+- Configurable recrawling policies based on page freshness.
+- Storage of additional metadata such as HTTP status code, response headers, page title, canonical URL, content type, and crawl duration.
+- Support for alternative storage backends such as SQLite, PostgreSQL, or distributed databases by modifying only the `PageStorage` implementation.
+- Parallel and distributed crawling using multiple worker threads or crawler instances.
+- Integration with indexing, ranking, duplicate page detection, and search modules using the stored webpage database.
+
+The modular design ensures that future components can be added with minimal changes to the existing implementation while maintaining clear separation of responsibilities.

@@ -83,7 +83,7 @@ void Normalizer::normalizePath(string &source){
     }
     if(content.size()){
         string extension=content[content.size()-1];
-        size_t pos=extension.find('.');
+        size_t pos=extension.rfind('.');
         if(pos!=string::npos){
             extension=extension.substr(pos);
             if(ignoreExtension.exists(extension)){
@@ -112,61 +112,85 @@ bool Normalizer::isrelative(string & source){
 }
 
 //string normalize()
-void Normalizer::normalize(string &source){
+void Normalizer::normalize(string &source)
+{
     To_lower(source);
 
-    // relative url hai
-    if(isrelative(source)){
-        relativeURL(source); 
+    // Relative URL
+    if (isrelative(source))
+    {
+        relativeURL(source);
         if (source.empty())
-        return ; 
+            return;
     }
-    
+
     removeFragment(source);
-    if (source.empty()) return ;
-    
-
-    
-    size_t schemePos=source.find("://"); 
-    
-    
-    string scheme = source.substr(0,schemePos);
-    string remaining = source.substr(schemePos+3);
-
-    size_t slashPos=remaining.find('/');
-    if(slashPos==string::npos){
+    if (source.empty())
         return;
+
+    size_t schemePos = source.find("://");
+
+    string scheme = source.substr(0, schemePos);
+    string remaining = source.substr(schemePos + 3);
+
+    string authority;
+    string path;
+
+    size_t slashPos = remaining.find('/');
+
+    if (slashPos == string::npos)
+    {
+        authority = remaining;
+        path = "/";
+    }
+    else
+    {
+        authority = remaining.substr(0, slashPos);
+        path = remaining.substr(slashPos);
     }
 
-    string authority=remaining.substr(0,slashPos);
-    string path =remaining.substr(slashPos);
+    // Remove default port
+    size_t dotPos = authority.find(':');
+    if (dotPos != string::npos)
+    {
+        string port = authority.substr(dotPos + 1);
+        string host = authority.substr(0, dotPos);
 
-    size_t dotPos=authority.find(':');
-    if(dotPos!=string::npos){
-        string port=authority.substr(dotPos+1);
-        string host=authority.substr(0,dotPos);
-
-        if((port=="80" && scheme=="http")||(port=="443" && scheme == "https")){
-            authority=host;
+        if ((port == "80" && scheme == "http") ||
+            (port == "443" && scheme == "https"))
+        {
+            authority = host;
         }
     }
 
-    // ignoreDomains
-    size_t checkpos=authority.find("www.");
-    string checkauth=authority;
-    if(checkpos!=string::npos){
-        checkauth=authority.substr(4);
+    // Ignore domains
+    string checkauth = authority;
+
+    if (checkauth.rfind("www.", 0) == 0)
+    {
+        checkauth = checkauth.substr(4);
     }
-    if(ignoreDomain.exists(checkauth)){
-        source="";
-        return ;
+
+    if (ignoreDomain.exists(checkauth))
+    {
+        source = "";
+        return;
     }
-    
+
     normalizePath(path);
 
-    
-    source= scheme + "://" + authority + path;
+    if (path.empty())
+    {
+        source = "";
+        return;
+    }
+    if(authority.find('*') != string::npos){
+    source = "";
+    return;
+    }
+    source = scheme + "://" + authority + path;
 }
+
 
 // relative ()
 void Normalizer::relativeURL(string & source){

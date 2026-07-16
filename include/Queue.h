@@ -12,7 +12,7 @@ class Queue{
     public:
     
     T pop();
-    int size();
+    size_t size();
     T front();
     bool empty();
     void push(T val);

@@ -1,28 +1,32 @@
 # pragma once
 #include"Queue.h"
 #include"Set.h"
+#include"Database.h"
 #include <string>
 
-using namespace std;
+
 
 
 class Frontier{
 
     struct URL{
-        string link;
+        std::string link;
         int depth;
-        string lastCrawl;
     };
-    string getDate();
+    std::string getDate();
     Queue<URL>queue;
+    Database database;
+
     
     public:
-    void put(string& link,int depth);
+    void put(std::string& link,int depth);
+    void putSeed(std::string& link,std::string& html,int depth=0,int max);
     URL pop();
     bool empty();
-    string getLink();
+    std::string getLink();
     int getDepth();
     size_t getSize();
+    void backup();
     
     
 };

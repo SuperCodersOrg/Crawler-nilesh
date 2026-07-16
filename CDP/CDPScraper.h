@@ -31,8 +31,24 @@
 
 #pragma once
 
-#include <ixwebsocket/IXWebSocket.h>
+#ifdef _WIN32
+
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
+#include <winsock2.h>
+#include <windows.h>
+#include <ws2tcpip.h>
+
+#endif
+
 #include <ixwebsocket/IXNetSystem.h>
+#include <ixwebsocket/IXWebSocket.h>
 #include <nlohmann/json.hpp>
 
 #include <atomic>
@@ -43,10 +59,6 @@
 #include <queue>
 #include <string>
 #include <vector>
-
-#ifdef _WIN32
-#include <windows.h>
-#endif
 
 class CDPScraper {
 public:

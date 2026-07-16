@@ -18,6 +18,8 @@ add_executable(Tests
      ../Database/Database.cpp
     NormalizerTests.cpp
     ../src/Normalizer.cpp
+    ../src/HtmlParser.cpp
+    HtmlParserTests.cpp
     QueueTests.cpp
     SetTests.cpp
     

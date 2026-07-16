@@ -1,10 +1,10 @@
-Start testing: Jul 15 17:07 India Standard Time
+Start testing: Jul 16 14:24 India Standard Time
 ----------------------------------------------------------
-1/32 Testing: QueueTest.EmptyQueue
-1/32 Test: QueueTest.EmptyQueue
+1/41 Testing: QueueTest.EmptyQueue
+1/41 Test: QueueTest.EmptyQueue
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.EmptyQueue" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.EmptyQueue" start time: Jul 15 17:07 India Standard Time
+"QueueTest.EmptyQueue" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -20,18 +20,18 @@ Note: Google Test filter = QueueTest.EmptyQueue
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.10 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.EmptyQueue" end time: Jul 15 17:07 India Standard Time
+"QueueTest.EmptyQueue" end time: Jul 16 14:24 India Standard Time
 "QueueTest.EmptyQueue" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/32 Testing: QueueTest.PushOneElement
-2/32 Test: QueueTest.PushOneElement
+2/41 Testing: QueueTest.PushOneElement
+2/41 Test: QueueTest.PushOneElement
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.PushOneElement" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.PushOneElement" start time: Jul 15 17:07 India Standard Time
+"QueueTest.PushOneElement" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -47,18 +47,18 @@ Note: Google Test filter = QueueTest.PushOneElement
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.07 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.PushOneElement" end time: Jul 15 17:07 India Standard Time
+"QueueTest.PushOneElement" end time: Jul 16 14:24 India Standard Time
 "QueueTest.PushOneElement" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/32 Testing: QueueTest.PushMultipleElements
-3/32 Test: QueueTest.PushMultipleElements
+3/41 Testing: QueueTest.PushMultipleElements
+3/41 Test: QueueTest.PushMultipleElements
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.PushMultipleElements" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.PushMultipleElements" start time: Jul 15 17:07 India Standard Time
+"QueueTest.PushMultipleElements" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -74,18 +74,18 @@ Note: Google Test filter = QueueTest.PushMultipleElements
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.06 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.PushMultipleElements" end time: Jul 15 17:07 India Standard Time
+"QueueTest.PushMultipleElements" end time: Jul 16 14:24 India Standard Time
 "QueueTest.PushMultipleElements" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/32 Testing: QueueTest.PopSingleElement
-4/32 Test: QueueTest.PopSingleElement
+4/41 Testing: QueueTest.PopSingleElement
+4/41 Test: QueueTest.PopSingleElement
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.PopSingleElement" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.PopSingleElement" start time: Jul 15 17:07 India Standard Time
+"QueueTest.PopSingleElement" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -104,15 +104,15 @@ Note: Google Test filter = QueueTest.PopSingleElement
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.PopSingleElement" end time: Jul 15 17:07 India Standard Time
+"QueueTest.PopSingleElement" end time: Jul 16 14:24 India Standard Time
 "QueueTest.PopSingleElement" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/32 Testing: QueueTest.PopMaintainsFIFO
-5/32 Test: QueueTest.PopMaintainsFIFO
+5/41 Testing: QueueTest.PopMaintainsFIFO
+5/41 Test: QueueTest.PopMaintainsFIFO
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.PopMaintainsFIFO" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.PopMaintainsFIFO" start time: Jul 15 17:07 India Standard Time
+"QueueTest.PopMaintainsFIFO" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -128,18 +128,18 @@ Note: Google Test filter = QueueTest.PopMaintainsFIFO
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.04 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.PopMaintainsFIFO" end time: Jul 15 17:07 India Standard Time
+"QueueTest.PopMaintainsFIFO" end time: Jul 16 14:24 India Standard Time
 "QueueTest.PopMaintainsFIFO" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/32 Testing: QueueTest.FrontAfterPop
-6/32 Test: QueueTest.FrontAfterPop
+6/41 Testing: QueueTest.FrontAfterPop
+6/41 Test: QueueTest.FrontAfterPop
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.FrontAfterPop" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.FrontAfterPop" start time: Jul 15 17:07 India Standard Time
+"QueueTest.FrontAfterPop" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -158,15 +158,15 @@ Note: Google Test filter = QueueTest.FrontAfterPop
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.FrontAfterPop" end time: Jul 15 17:07 India Standard Time
+"QueueTest.FrontAfterPop" end time: Jul 16 14:24 India Standard Time
 "QueueTest.FrontAfterPop" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/32 Testing: QueueTest.SizeAfterPushAndPop
-7/32 Test: QueueTest.SizeAfterPushAndPop
+7/41 Testing: QueueTest.SizeAfterPushAndPop
+7/41 Test: QueueTest.SizeAfterPushAndPop
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.SizeAfterPushAndPop" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.SizeAfterPushAndPop" start time: Jul 15 17:07 India Standard Time
+"QueueTest.SizeAfterPushAndPop" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -182,18 +182,18 @@ Note: Google Test filter = QueueTest.SizeAfterPushAndPop
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.SizeAfterPushAndPop" end time: Jul 15 17:07 India Standard Time
+"QueueTest.SizeAfterPushAndPop" end time: Jul 16 14:24 India Standard Time
 "QueueTest.SizeAfterPushAndPop" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/32 Testing: QueueTest.PushAfterEmpty
-8/32 Test: QueueTest.PushAfterEmpty
+8/41 Testing: QueueTest.PushAfterEmpty
+8/41 Test: QueueTest.PushAfterEmpty
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.PushAfterEmpty" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.PushAfterEmpty" start time: Jul 15 17:07 India Standard Time
+"QueueTest.PushAfterEmpty" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -209,18 +209,18 @@ Note: Google Test filter = QueueTest.PushAfterEmpty
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.PushAfterEmpty" end time: Jul 15 17:07 India Standard Time
+"QueueTest.PushAfterEmpty" end time: Jul 16 14:24 India Standard Time
 "QueueTest.PushAfterEmpty" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/32 Testing: QueueTest.StringQueue
-9/32 Test: QueueTest.StringQueue
+9/41 Testing: QueueTest.StringQueue
+9/41 Test: QueueTest.StringQueue
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.StringQueue" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.StringQueue" start time: Jul 15 17:07 India Standard Time
+"QueueTest.StringQueue" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -239,15 +239,15 @@ Note: Google Test filter = QueueTest.StringQueue
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.StringQueue" end time: Jul 15 17:07 India Standard Time
+"QueueTest.StringQueue" end time: Jul 16 14:24 India Standard Time
 "QueueTest.StringQueue" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-10/32 Testing: QueueTest.LargeNumberOfElements
-10/32 Test: QueueTest.LargeNumberOfElements
+10/41 Testing: QueueTest.LargeNumberOfElements
+10/41 Test: QueueTest.LargeNumberOfElements
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=QueueTest.LargeNumberOfElements" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"QueueTest.LargeNumberOfElements" start time: Jul 15 17:07 India Standard Time
+"QueueTest.LargeNumberOfElements" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -266,259 +266,25 @@ Note: Google Test filter = QueueTest.LargeNumberOfElements
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"QueueTest.LargeNumberOfElements" end time: Jul 15 17:07 India Standard Time
+"QueueTest.LargeNumberOfElements" end time: Jul 16 14:24 India Standard Time
 "QueueTest.LargeNumberOfElements" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-11/32 Testing: NormalizerTest.RelativeURL
-11/32 Test: NormalizerTest.RelativeURL
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RelativeURL" "--gtest_also_run_disabled_tests"
+11/41 Testing: HtmlParserTest.ParseSingleLink
+11/41 Test: HtmlParserTest.ParseSingleLink
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.ParseSingleLink" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.RelativeURL" start time: Jul 15 17:07 India Standard Time
+"HtmlParserTest.ParseSingleLink" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.RelativeURL
+Note: Google Test filter = HtmlParserTest.ParseSingleLink
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.RelativeURL
-File not found
-File not found
-[       OK ] NormalizerTest.RelativeURL (1 ms)
-[----------] 1 test from NormalizerTest (1 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.06 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.RelativeURL" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.RelativeURL" time elapsed: 00:00:00
-----------------------------------------------------------
-
-12/32 Testing: NormalizerTest.AbsoluteURL
-12/32 Test: NormalizerTest.AbsoluteURL
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.AbsoluteURL" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.AbsoluteURL" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.AbsoluteURL
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.AbsoluteURL
-File not found
-File not found
-[       OK ] NormalizerTest.AbsoluteURL (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.06 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.AbsoluteURL" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.AbsoluteURL" time elapsed: 00:00:00
-----------------------------------------------------------
-
-13/32 Testing: NormalizerTest.LowerCaseNormalization
-13/32 Test: NormalizerTest.LowerCaseNormalization
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.LowerCaseNormalization" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.LowerCaseNormalization" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.LowerCaseNormalization
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.LowerCaseNormalization
-File not found
-File not found
-[       OK ] NormalizerTest.LowerCaseNormalization (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.06 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.LowerCaseNormalization" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.LowerCaseNormalization" time elapsed: 00:00:00
-----------------------------------------------------------
-
-14/32 Testing: NormalizerTest.RemoveFragment
-14/32 Test: NormalizerTest.RemoveFragment
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RemoveFragment" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.RemoveFragment" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.RemoveFragment
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.RemoveFragment
-File not found
-File not found
-[       OK ] NormalizerTest.RemoveFragment (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.RemoveFragment" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.RemoveFragment" time elapsed: 00:00:00
-----------------------------------------------------------
-
-15/32 Testing: NormalizerTest.RemoveDefaultHTTPPort
-15/32 Test: NormalizerTest.RemoveDefaultHTTPPort
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RemoveDefaultHTTPPort" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.RemoveDefaultHTTPPort" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.RemoveDefaultHTTPPort
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.RemoveDefaultHTTPPort
-File not found
-File not found
-[       OK ] NormalizerTest.RemoveDefaultHTTPPort (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.RemoveDefaultHTTPPort" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.RemoveDefaultHTTPPort" time elapsed: 00:00:00
-----------------------------------------------------------
-
-16/32 Testing: NormalizerTest.RemoveDefaultHTTPSPort
-16/32 Test: NormalizerTest.RemoveDefaultHTTPSPort
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RemoveDefaultHTTPSPort" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.RemoveDefaultHTTPSPort" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.RemoveDefaultHTTPSPort
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.RemoveDefaultHTTPSPort
-File not found
-File not found
-[       OK ] NormalizerTest.RemoveDefaultHTTPSPort (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.RemoveDefaultHTTPSPort" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.RemoveDefaultHTTPSPort" time elapsed: 00:00:00
-----------------------------------------------------------
-
-17/32 Testing: NormalizerTest.IgnoreMailTo
-17/32 Test: NormalizerTest.IgnoreMailTo
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.IgnoreMailTo" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.IgnoreMailTo" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.IgnoreMailTo
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.IgnoreMailTo
-File not found
-File not found
-[       OK ] NormalizerTest.IgnoreMailTo (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.06 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.IgnoreMailTo" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.IgnoreMailTo" time elapsed: 00:00:00
-----------------------------------------------------------
-
-18/32 Testing: NormalizerTest.IgnoreJavascript
-18/32 Test: NormalizerTest.IgnoreJavascript
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.IgnoreJavascript" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.IgnoreJavascript" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.IgnoreJavascript
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.IgnoreJavascript
-File not found
-File not found
-[       OK ] NormalizerTest.IgnoreJavascript (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.05 sec
-----------------------------------------------------------
-Test Passed.
-"NormalizerTest.IgnoreJavascript" end time: Jul 15 17:07 India Standard Time
-"NormalizerTest.IgnoreJavascript" time elapsed: 00:00:00
-----------------------------------------------------------
-
-19/32 Testing: NormalizerTest.RelativeConversion
-19/32 Test: NormalizerTest.RelativeConversion
-Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RelativeConversion" "--gtest_also_run_disabled_tests"
-Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.RelativeConversion" start time: Jul 15 17:07 India Standard Time
-Output:
-----------------------------------------------------------
-Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
-Note: Google Test filter = NormalizerTest.RelativeConversion
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from NormalizerTest
-[ RUN      ] NormalizerTest.RelativeConversion
-File not found
-File not found
-[       OK ] NormalizerTest.RelativeConversion (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.ParseSingleLink
+[       OK ] HtmlParserTest.ParseSingleLink (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
@@ -527,15 +293,501 @@ File not found
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"NormalizerTest.RelativeConversion" end time: Jul 15 17:07 India Standard Time
+"HtmlParserTest.ParseSingleLink" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.ParseSingleLink" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/41 Testing: HtmlParserTest.ParseMultipleLinks
+12/41 Test: HtmlParserTest.ParseMultipleLinks
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.ParseMultipleLinks" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.ParseMultipleLinks" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.ParseMultipleLinks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.ParseMultipleLinks
+[       OK ] HtmlParserTest.ParseMultipleLinks (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.ParseMultipleLinks" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.ParseMultipleLinks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/41 Testing: HtmlParserTest.ParseNoLinks
+13/41 Test: HtmlParserTest.ParseNoLinks
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.ParseNoLinks" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.ParseNoLinks" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.ParseNoLinks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.ParseNoLinks
+[       OK ] HtmlParserTest.ParseNoLinks (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.ParseNoLinks" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.ParseNoLinks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/41 Testing: HtmlParserTest.IgnorePlainTextHttp
+14/41 Test: HtmlParserTest.IgnorePlainTextHttp
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.IgnorePlainTextHttp" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.IgnorePlainTextHttp" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.IgnorePlainTextHttp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.IgnorePlainTextHttp
+[       OK ] HtmlParserTest.IgnorePlainTextHttp (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.IgnorePlainTextHttp" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.IgnorePlainTextHttp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/41 Testing: HtmlParserTest.EmptyHtml
+15/41 Test: HtmlParserTest.EmptyHtml
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.EmptyHtml" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.EmptyHtml" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.EmptyHtml
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.EmptyHtml
+[       OK ] HtmlParserTest.EmptyHtml (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.EmptyHtml" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.EmptyHtml" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/41 Testing: HtmlParserTest.RelativeLink
+16/41 Test: HtmlParserTest.RelativeLink
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.RelativeLink" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.RelativeLink" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.RelativeLink
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.RelativeLink
+[       OK ] HtmlParserTest.RelativeLink (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.RelativeLink" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.RelativeLink" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/41 Testing: HtmlParserTest.DuplicateLinks
+17/41 Test: HtmlParserTest.DuplicateLinks
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.DuplicateLinks" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.DuplicateLinks" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.DuplicateLinks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.DuplicateLinks
+[       OK ] HtmlParserTest.DuplicateLinks (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.DuplicateLinks" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.DuplicateLinks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/41 Testing: HtmlParserTest.MalformedHtml
+18/41 Test: HtmlParserTest.MalformedHtml
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.MalformedHtml" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.MalformedHtml" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.MalformedHtml
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.MalformedHtml
+[       OK ] HtmlParserTest.MalformedHtml (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.MalformedHtml" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.MalformedHtml" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/41 Testing: HtmlParserTest.MixedContent
+19/41 Test: HtmlParserTest.MixedContent
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=HtmlParserTest.MixedContent" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"HtmlParserTest.MixedContent" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = HtmlParserTest.MixedContent
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from HtmlParserTest
+[ RUN      ] HtmlParserTest.MixedContent
+[       OK ] HtmlParserTest.MixedContent (0 ms)
+[----------] 1 test from HtmlParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"HtmlParserTest.MixedContent" end time: Jul 16 14:24 India Standard Time
+"HtmlParserTest.MixedContent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/41 Testing: NormalizerTest.RelativeURL
+20/41 Test: NormalizerTest.RelativeURL
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RelativeURL" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.RelativeURL" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.RelativeURL
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.RelativeURL
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.RelativeURL (51 ms)
+[----------] 1 test from NormalizerTest (51 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (51 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.RelativeURL" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.RelativeURL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/41 Testing: NormalizerTest.AbsoluteURL
+21/41 Test: NormalizerTest.AbsoluteURL
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.AbsoluteURL" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.AbsoluteURL" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.AbsoluteURL
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.AbsoluteURL
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.AbsoluteURL (43 ms)
+[----------] 1 test from NormalizerTest (43 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (43 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.AbsoluteURL" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.AbsoluteURL" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/41 Testing: NormalizerTest.LowerCaseNormalization
+22/41 Test: NormalizerTest.LowerCaseNormalization
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.LowerCaseNormalization" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.LowerCaseNormalization" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.LowerCaseNormalization
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.LowerCaseNormalization
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.LowerCaseNormalization (101 ms)
+[----------] 1 test from NormalizerTest (101 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (101 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.LowerCaseNormalization" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.LowerCaseNormalization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/41 Testing: NormalizerTest.RemoveFragment
+23/41 Test: NormalizerTest.RemoveFragment
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RemoveFragment" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.RemoveFragment" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.RemoveFragment
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.RemoveFragment
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.RemoveFragment (127 ms)
+[----------] 1 test from NormalizerTest (127 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (128 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.RemoveFragment" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.RemoveFragment" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/41 Testing: NormalizerTest.RemoveDefaultHTTPPort
+24/41 Test: NormalizerTest.RemoveDefaultHTTPPort
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RemoveDefaultHTTPPort" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.RemoveDefaultHTTPPort" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.RemoveDefaultHTTPPort
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.RemoveDefaultHTTPPort
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.RemoveDefaultHTTPPort (122 ms)
+[----------] 1 test from NormalizerTest (122 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (123 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.RemoveDefaultHTTPPort" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.RemoveDefaultHTTPPort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/41 Testing: NormalizerTest.RemoveDefaultHTTPSPort
+25/41 Test: NormalizerTest.RemoveDefaultHTTPSPort
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RemoveDefaultHTTPSPort" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.RemoveDefaultHTTPSPort" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.RemoveDefaultHTTPSPort
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.RemoveDefaultHTTPSPort
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.RemoveDefaultHTTPSPort (126 ms)
+[----------] 1 test from NormalizerTest (126 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (127 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.RemoveDefaultHTTPSPort" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.RemoveDefaultHTTPSPort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/41 Testing: NormalizerTest.IgnoreMailTo
+26/41 Test: NormalizerTest.IgnoreMailTo
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.IgnoreMailTo" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.IgnoreMailTo" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.IgnoreMailTo
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.IgnoreMailTo
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.IgnoreMailTo (120 ms)
+[----------] 1 test from NormalizerTest (120 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (120 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.IgnoreMailTo" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.IgnoreMailTo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/41 Testing: NormalizerTest.IgnoreJavascript
+27/41 Test: NormalizerTest.IgnoreJavascript
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.IgnoreJavascript" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.IgnoreJavascript" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.IgnoreJavascript
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.IgnoreJavascript
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.IgnoreJavascript (122 ms)
+[----------] 1 test from NormalizerTest (122 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (122 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.IgnoreJavascript" end time: Jul 16 14:24 India Standard Time
+"NormalizerTest.IgnoreJavascript" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/41 Testing: NormalizerTest.RelativeConversion
+28/41 Test: NormalizerTest.RelativeConversion
+Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RelativeConversion" "--gtest_also_run_disabled_tests"
+Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
+"NormalizerTest.RelativeConversion" start time: Jul 16 14:24 India Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = NormalizerTest.RelativeConversion
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NormalizerTest
+[ RUN      ] NormalizerTest.RelativeConversion
+Database Connected Successfully
+File not found
+File not found
+[       OK ] NormalizerTest.RelativeConversion (121 ms)
+[----------] 1 test from NormalizerTest (121 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (122 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"NormalizerTest.RelativeConversion" end time: Jul 16 14:24 India Standard Time
 "NormalizerTest.RelativeConversion" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-20/32 Testing: NormalizerTest.RelativeRootConversion
-20/32 Test: NormalizerTest.RelativeRootConversion
+29/41 Testing: NormalizerTest.RelativeRootConversion
+29/41 Test: NormalizerTest.RelativeRootConversion
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.RelativeRootConversion" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.RelativeRootConversion" start time: Jul 15 17:07 India Standard Time
+"NormalizerTest.RelativeRootConversion" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -544,27 +796,28 @@ Note: Google Test filter = NormalizerTest.RelativeRootConversion
 [----------] Global test environment set-up.
 [----------] 1 test from NormalizerTest
 [ RUN      ] NormalizerTest.RelativeRootConversion
+Database Connected Successfully
 File not found
 File not found
-[       OK ] NormalizerTest.RelativeRootConversion (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
+[       OK ] NormalizerTest.RelativeRootConversion (90 ms)
+[----------] 1 test from NormalizerTest (90 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (90 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.19 sec
 ----------------------------------------------------------
 Test Passed.
-"NormalizerTest.RelativeRootConversion" end time: Jul 15 17:07 India Standard Time
+"NormalizerTest.RelativeRootConversion" end time: Jul 16 14:24 India Standard Time
 "NormalizerTest.RelativeRootConversion" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-21/32 Testing: NormalizerTest.IgnoreInvalidAuthority
-21/32 Test: NormalizerTest.IgnoreInvalidAuthority
+30/41 Testing: NormalizerTest.IgnoreInvalidAuthority
+30/41 Test: NormalizerTest.IgnoreInvalidAuthority
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.IgnoreInvalidAuthority" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.IgnoreInvalidAuthority" start time: Jul 15 17:07 India Standard Time
+"NormalizerTest.IgnoreInvalidAuthority" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -573,27 +826,28 @@ Note: Google Test filter = NormalizerTest.IgnoreInvalidAuthority
 [----------] Global test environment set-up.
 [----------] 1 test from NormalizerTest
 [ RUN      ] NormalizerTest.IgnoreInvalidAuthority
+Database Connected Successfully
 File not found
 File not found
-[       OK ] NormalizerTest.IgnoreInvalidAuthority (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
+[       OK ] NormalizerTest.IgnoreInvalidAuthority (81 ms)
+[----------] 1 test from NormalizerTest (81 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (81 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.15 sec
 ----------------------------------------------------------
 Test Passed.
-"NormalizerTest.IgnoreInvalidAuthority" end time: Jul 15 17:07 India Standard Time
+"NormalizerTest.IgnoreInvalidAuthority" end time: Jul 16 14:24 India Standard Time
 "NormalizerTest.IgnoreInvalidAuthority" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-22/32 Testing: NormalizerTest.NormalizeDynamicArray
-22/32 Test: NormalizerTest.NormalizeDynamicArray
+31/41 Testing: NormalizerTest.NormalizeDynamicArray
+31/41 Test: NormalizerTest.NormalizeDynamicArray
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=NormalizerTest.NormalizeDynamicArray" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"NormalizerTest.NormalizeDynamicArray" start time: Jul 15 17:07 India Standard Time
+"NormalizerTest.NormalizeDynamicArray" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -602,27 +856,28 @@ Note: Google Test filter = NormalizerTest.NormalizeDynamicArray
 [----------] Global test environment set-up.
 [----------] 1 test from NormalizerTest
 [ RUN      ] NormalizerTest.NormalizeDynamicArray
+Database Connected Successfully
 File not found
 File not found
-[       OK ] NormalizerTest.NormalizeDynamicArray (0 ms)
-[----------] 1 test from NormalizerTest (0 ms total)
+[       OK ] NormalizerTest.NormalizeDynamicArray (51 ms)
+[----------] 1 test from NormalizerTest (51 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (51 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"NormalizerTest.NormalizeDynamicArray" end time: Jul 15 17:07 India Standard Time
+"NormalizerTest.NormalizeDynamicArray" end time: Jul 16 14:24 India Standard Time
 "NormalizerTest.NormalizeDynamicArray" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-23/32 Testing: PageStorageTest.StorePage
-23/32 Test: PageStorageTest.StorePage
+32/41 Testing: PageStorageTest.StorePage
+32/41 Test: PageStorageTest.StorePage
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.StorePage" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.StorePage" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.StorePage" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -632,25 +887,25 @@ Note: Google Test filter = PageStorageTest.StorePage
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.StorePage
 Database Connected Successfully
-[       OK ] PageStorageTest.StorePage (307 ms)
-[----------] 1 test from PageStorageTest (307 ms total)
+[       OK ] PageStorageTest.StorePage (58 ms)
+[----------] 1 test from PageStorageTest (58 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (307 ms total)
+[==========] 1 test from 1 test suite ran. (58 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.39 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.StorePage" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.StorePage" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.StorePage" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-24/32 Testing: PageStorageTest.GetPage
-24/32 Test: PageStorageTest.GetPage
+33/41 Testing: PageStorageTest.GetPage
+33/41 Test: PageStorageTest.GetPage
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.GetPage" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.GetPage" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetPage" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -660,25 +915,25 @@ Note: Google Test filter = PageStorageTest.GetPage
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.GetPage
 Database Connected Successfully
-[       OK ] PageStorageTest.GetPage (188 ms)
-[----------] 1 test from PageStorageTest (188 ms total)
+[       OK ] PageStorageTest.GetPage (60 ms)
+[----------] 1 test from PageStorageTest (60 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (188 ms total)
+[==========] 1 test from 1 test suite ran. (60 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.32 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.GetPage" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetPage" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.GetPage" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-25/32 Testing: PageStorageTest.GetHtml
-25/32 Test: PageStorageTest.GetHtml
+34/41 Testing: PageStorageTest.GetHtml
+34/41 Test: PageStorageTest.GetHtml
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.GetHtml" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.GetHtml" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetHtml" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -688,25 +943,25 @@ Note: Google Test filter = PageStorageTest.GetHtml
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.GetHtml
 Database Connected Successfully
-[       OK ] PageStorageTest.GetHtml (162 ms)
-[----------] 1 test from PageStorageTest (162 ms total)
+[       OK ] PageStorageTest.GetHtml (141 ms)
+[----------] 1 test from PageStorageTest (141 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (162 ms total)
+[==========] 1 test from 1 test suite ran. (141 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.28 sec
+Test time =   0.23 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.GetHtml" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetHtml" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.GetHtml" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-26/32 Testing: PageStorageTest.GetDepth
-26/32 Test: PageStorageTest.GetDepth
+35/41 Testing: PageStorageTest.GetDepth
+35/41 Test: PageStorageTest.GetDepth
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.GetDepth" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.GetDepth" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetDepth" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -716,25 +971,25 @@ Note: Google Test filter = PageStorageTest.GetDepth
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.GetDepth
 Database Connected Successfully
-[       OK ] PageStorageTest.GetDepth (91 ms)
-[----------] 1 test from PageStorageTest (91 ms total)
+[       OK ] PageStorageTest.GetDepth (137 ms)
+[----------] 1 test from PageStorageTest (137 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (91 ms total)
+[==========] 1 test from 1 test suite ran. (137 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.14 sec
+Test time =   0.26 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.GetDepth" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetDepth" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.GetDepth" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-27/32 Testing: PageStorageTest.GetLastCrawl
-27/32 Test: PageStorageTest.GetLastCrawl
+36/41 Testing: PageStorageTest.GetLastCrawl
+36/41 Test: PageStorageTest.GetLastCrawl
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.GetLastCrawl" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.GetLastCrawl" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetLastCrawl" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -744,25 +999,25 @@ Note: Google Test filter = PageStorageTest.GetLastCrawl
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.GetLastCrawl
 Database Connected Successfully
-[       OK ] PageStorageTest.GetLastCrawl (80 ms)
-[----------] 1 test from PageStorageTest (80 ms total)
+[       OK ] PageStorageTest.GetLastCrawl (137 ms)
+[----------] 1 test from PageStorageTest (137 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (80 ms total)
+[==========] 1 test from 1 test suite ran. (137 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.14 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.GetLastCrawl" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.GetLastCrawl" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.GetLastCrawl" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-28/32 Testing: PageStorageTest.InvalidPageLookup
-28/32 Test: PageStorageTest.InvalidPageLookup
+37/41 Testing: PageStorageTest.InvalidPageLookup
+37/41 Test: PageStorageTest.InvalidPageLookup
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.InvalidPageLookup" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.InvalidPageLookup" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidPageLookup" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -772,25 +1027,25 @@ Note: Google Test filter = PageStorageTest.InvalidPageLookup
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.InvalidPageLookup
 Database Connected Successfully
-[       OK ] PageStorageTest.InvalidPageLookup (91 ms)
-[----------] 1 test from PageStorageTest (91 ms total)
+[       OK ] PageStorageTest.InvalidPageLookup (131 ms)
+[----------] 1 test from PageStorageTest (131 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (91 ms total)
+[==========] 1 test from 1 test suite ran. (132 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.15 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.InvalidPageLookup" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidPageLookup" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.InvalidPageLookup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-29/32 Testing: PageStorageTest.InvalidHtml
-29/32 Test: PageStorageTest.InvalidHtml
+38/41 Testing: PageStorageTest.InvalidHtml
+38/41 Test: PageStorageTest.InvalidHtml
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.InvalidHtml" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.InvalidHtml" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidHtml" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -800,25 +1055,25 @@ Note: Google Test filter = PageStorageTest.InvalidHtml
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.InvalidHtml
 Database Connected Successfully
-[       OK ] PageStorageTest.InvalidHtml (77 ms)
-[----------] 1 test from PageStorageTest (77 ms total)
+[       OK ] PageStorageTest.InvalidHtml (133 ms)
+[----------] 1 test from PageStorageTest (133 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (77 ms total)
+[==========] 1 test from 1 test suite ran. (133 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.15 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.InvalidHtml" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidHtml" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.InvalidHtml" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-30/32 Testing: PageStorageTest.InvalidDepth
-30/32 Test: PageStorageTest.InvalidDepth
+39/41 Testing: PageStorageTest.InvalidDepth
+39/41 Test: PageStorageTest.InvalidDepth
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.InvalidDepth" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.InvalidDepth" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidDepth" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -828,25 +1083,25 @@ Note: Google Test filter = PageStorageTest.InvalidDepth
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.InvalidDepth
 Database Connected Successfully
-[       OK ] PageStorageTest.InvalidDepth (122 ms)
-[----------] 1 test from PageStorageTest (123 ms total)
+[       OK ] PageStorageTest.InvalidDepth (134 ms)
+[----------] 1 test from PageStorageTest (134 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (123 ms total)
+[==========] 1 test from 1 test suite ran. (135 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.20 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.InvalidDepth" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidDepth" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.InvalidDepth" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-31/32 Testing: PageStorageTest.InvalidLastCrawl
-31/32 Test: PageStorageTest.InvalidLastCrawl
+40/41 Testing: PageStorageTest.InvalidLastCrawl
+40/41 Test: PageStorageTest.InvalidLastCrawl
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.InvalidLastCrawl" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.InvalidLastCrawl" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidLastCrawl" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -856,25 +1111,25 @@ Note: Google Test filter = PageStorageTest.InvalidLastCrawl
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.InvalidLastCrawl
 Database Connected Successfully
-[       OK ] PageStorageTest.InvalidLastCrawl (121 ms)
-[----------] 1 test from PageStorageTest (121 ms total)
+[       OK ] PageStorageTest.InvalidLastCrawl (116 ms)
+[----------] 1 test from PageStorageTest (116 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (121 ms total)
+[==========] 1 test from 1 test suite ran. (117 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.22 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.InvalidLastCrawl" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.InvalidLastCrawl" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.InvalidLastCrawl" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-32/32 Testing: PageStorageTest.MultiplePages
-32/32 Test: PageStorageTest.MultiplePages
+41/41 Testing: PageStorageTest.MultiplePages
+41/41 Test: PageStorageTest.MultiplePages
 Command: "D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests.exe" "--gtest_filter=PageStorageTest.MultiplePages" "--gtest_also_run_disabled_tests"
 Directory: D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build
-"PageStorageTest.MultiplePages" start time: Jul 15 17:07 India Standard Time
+"PageStorageTest.MultiplePages" start time: Jul 16 14:24 India Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
@@ -884,18 +1139,18 @@ Note: Google Test filter = PageStorageTest.MultiplePages
 [----------] 1 test from PageStorageTest
 [ RUN      ] PageStorageTest.MultiplePages
 Database Connected Successfully
-[       OK ] PageStorageTest.MultiplePages (147 ms)
-[----------] 1 test from PageStorageTest (147 ms total)
+[       OK ] PageStorageTest.MultiplePages (116 ms)
+[----------] 1 test from PageStorageTest (116 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (147 ms total)
+[==========] 1 test from 1 test suite ran. (116 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.22 sec
+Test time =   0.18 sec
 ----------------------------------------------------------
 Test Passed.
-"PageStorageTest.MultiplePages" end time: Jul 15 17:07 India Standard Time
+"PageStorageTest.MultiplePages" end time: Jul 16 14:24 India Standard Time
 "PageStorageTest.MultiplePages" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 15 17:07 India Standard Time
+End testing: Jul 16 14:24 India Standard Time

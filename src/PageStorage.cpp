@@ -1,5 +1,7 @@
 #include "../include/PageStorage.h"
 
+
+using namespace std;
 PageStorage::PageStorage()
 {
 }
@@ -32,4 +34,8 @@ int PageStorage::getDepth(string &url)
 string PageStorage::getLastCrawl(string &url)
 {
     return d.getLastCrawl(url);
+}
+
+string PageStorage::getLastURL(){
+    return d.getLastUrl();
 }

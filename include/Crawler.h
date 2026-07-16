@@ -10,7 +10,7 @@
 class Crawler{
     private:
     int depth;
-    Set<string>visited;
+    Set<std::string>visited;
     Frontier frontier;
     Normalizer normalizer;
     CDPScraper fetch;
@@ -20,7 +20,7 @@ class Crawler{
     public:
     Crawler();
     void Continue();
-    void crawl(string seed,int deep);
+    void crawl(std::string seed,int deep);
 
 
 };

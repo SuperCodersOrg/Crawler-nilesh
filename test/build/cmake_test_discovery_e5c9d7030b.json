@@ -1,5 +1,5 @@
 {
-  "tests": 32,
+  "tests": 41,
   "name": "AllTests",
   "testsuites": [
     {
@@ -55,6 +55,57 @@
           "name": "LargeNumberOfElements",
           "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/QueueTests.cpp",
           "line": 112
+        }
+      ]
+    },
+    {
+      "name": "HtmlParserTest",
+      "tests": 9,
+      "testsuite": [
+        {
+          "name": "ParseSingleLink",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 10
+        },
+        {
+          "name": "ParseMultipleLinks",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 24
+        },
+        {
+          "name": "ParseNoLinks",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 40
+        },
+        {
+          "name": "IgnorePlainTextHttp",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 51
+        },
+        {
+          "name": "EmptyHtml",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 62
+        },
+        {
+          "name": "RelativeLink",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 70
+        },
+        {
+          "name": "DuplicateLinks",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 82
+        },
+        {
+          "name": "MalformedHtml",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 96
+        },
+        {
+          "name": "MixedContent",
+          "file": "D:\/CodeQuotient\/Project\/Project 2 - Crawler\/Web_crawler\/test\/HtmlParserTests.cpp",
+          "line": 108
         }
       ]
     },

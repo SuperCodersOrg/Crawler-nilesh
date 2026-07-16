@@ -3,7 +3,7 @@
 #include <string>
 #include "Database.h"
 
-using namespace std;
+
 
 class PageStorage
 {
@@ -13,18 +13,20 @@ private:
 public:
     PageStorage();
 
-    bool storePage(string &url,
-                   string &html,
+    bool storePage(std::string &url,
+                   std::string &html,
                    int depth);
 
-    bool getPage(string &url,
+    bool getPage(std::string &url,
                  int &depth,
-                 string &html,
-                 string &lastCrawl);
+                 std::string &html,
+                 std::string &lastCrawl);
 
-    string getHtml(string &url);
+    std::string getHtml(std::string &url);
     
-    int getDepth(string &url);
+    int getDepth(std::string &url);
 
-    string getLastCrawl(string &url);
+    std::string getLastURL();
+
+    std::string getLastCrawl(std::string &url);
 };

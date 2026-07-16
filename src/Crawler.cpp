@@ -1,13 +1,24 @@
 #include "../include/Crawler.h"
 
+using namespace std;
+
 Crawler::Crawler(){
     depth=2;
     normalizer.seedLink="empty";
 }
 
-// void Continue(){
-
-// }
+void Crawler:: Continue(){
+    string url=pages.getLastURL();
+        if(url=="null"){
+            cout<<"Last Url not found";
+            return ;
+        }
+        int d=pages.getDepth(url);
+        frontier.backup();
+        cout<<"Continuing from last url: "<<url<<"\nDepth: "<<d<<endl;
+        crawl(url,d);
+        cout<<"Finished\n";
+}
 
 void Crawler::crawl(string seed,int deep=2){
     depth=deep;
@@ -80,31 +91,33 @@ int main(){
     cout << "Main Started\n";
 
     Crawler c;
+    
+
 
     cout << "Crawler Created\n";
 
     string input;
     int depth,size;
 
-    // int choice;
-    // cout<<"1. Continue crawler?\n2. Start from a seed link\n";
-    // cin>>choice;
-    // if(choice==1){
+    int choice;
+    cout<<"1. Continue crawler?\n2. Start from a seed link\n";
+    cin>>choice;
+    if(choice==1){
+        c.Continue();
 
-    //     cout << "Finished\n";
+    }
+    else if(choice ==2){
+        cout<<"Enter a Seed link: ";
+        cin>>input;
+        cout<<"Enter MaxDepth: ";
+        cin>>depth;
+        c.crawl(input,depth);
+        cout<<"Finished\n";
+    }
+    else{
+        cout<<"You entered an invalid choice";
+    }
 
-    // }
-    // else if(choice ==2){
-    // }
-    // else{
-    //     cout<<"You entered an invalid choice";
-    // }
-    
-    cout<<"Enter a Seed link: ";
-    cin>>input;
-    cout<<"Enter MaxDepth: ";
-    cin>>depth;
-    c.crawl(input,depth);
     
     
     

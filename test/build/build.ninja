@@ -89,6 +89,24 @@ build CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawl
   OBJECT_FILE_DIR = CMakeFiles\Tests.dir\D_\CodeQuotient\Project\Project_2_-_Crawler\Web_crawler\src
   TARGET_SUPPORT_DIR = CMakeFiles\Tests.dir
 
+build CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/HtmlParser.cpp.obj: CXX_COMPILER__Tests_unscanned_ D$:/CodeQuotient/Project/Project$ 2$ -$ Crawler/Web_crawler/src/HtmlParser.cpp || cmake_object_order_depends_target_Tests
+  DEFINES = -DGTEST_LINKED_AS_SHARED_LIBRARY=1
+  DEP_FILE = CMakeFiles\Tests.dir\D_\CodeQuotient\Project\Project_2_-_Crawler\Web_crawler\src\HtmlParser.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/../include" -I"C:/Program Files/MySQL/MySQL Server 8.0/include"
+  OBJECT_DIR = CMakeFiles\Tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tests.dir\D_\CodeQuotient\Project\Project_2_-_Crawler\Web_crawler\src
+  TARGET_SUPPORT_DIR = CMakeFiles\Tests.dir
+
+build CMakeFiles/Tests.dir/HtmlParserTests.cpp.obj: CXX_COMPILER__Tests_unscanned_ D$:/CodeQuotient/Project/Project$ 2$ -$ Crawler/Web_crawler/test/HtmlParserTests.cpp || cmake_object_order_depends_target_Tests
+  DEFINES = -DGTEST_LINKED_AS_SHARED_LIBRARY=1
+  DEP_FILE = CMakeFiles\Tests.dir\HtmlParserTests.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/../include" -I"C:/Program Files/MySQL/MySQL Server 8.0/include"
+  OBJECT_DIR = CMakeFiles\Tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tests.dir
+  TARGET_SUPPORT_DIR = CMakeFiles\Tests.dir
+
 build CMakeFiles/Tests.dir/QueueTests.cpp.obj: CXX_COMPILER__Tests_unscanned_ D$:/CodeQuotient/Project/Project$ 2$ -$ Crawler/Web_crawler/test/QueueTests.cpp || cmake_object_order_depends_target_Tests
   DEFINES = -DGTEST_LINKED_AS_SHARED_LIBRARY=1
   DEP_FILE = CMakeFiles\Tests.dir\QueueTests.cpp.obj.d
@@ -115,7 +133,7 @@ build CMakeFiles/Tests.dir/SetTests.cpp.obj: CXX_COMPILER__Tests_unscanned_ D$:/
 #############################################
 # Link the executable Tests.exe
 
-build Tests.exe Tests[1]_tests.cmake | ${cmake_ninja_workdir}Tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__Tests_ CMakeFiles/Tests.dir/PageStorageTests.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj CMakeFiles/Tests.dir/NormalizerTests.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/Normalizer.cpp.obj CMakeFiles/Tests.dir/QueueTests.cpp.obj CMakeFiles/Tests.dir/SetTests.cpp.obj | C$:/msys64/ucrt64/lib/libgtest_main.dll.a C$:/msys64/ucrt64/lib/libgtest.dll.a
+build Tests.exe Tests[1]_tests.cmake | ${cmake_ninja_workdir}Tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__Tests_ CMakeFiles/Tests.dir/PageStorageTests.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj CMakeFiles/Tests.dir/NormalizerTests.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/Normalizer.cpp.obj CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/HtmlParser.cpp.obj CMakeFiles/Tests.dir/HtmlParserTests.cpp.obj CMakeFiles/Tests.dir/QueueTests.cpp.obj CMakeFiles/Tests.dir/SetTests.cpp.obj | C$:/msys64/ucrt64/lib/libgtest_main.dll.a C$:/msys64/ucrt64/lib/libgtest.dll.a
   LINK_LIBRARIES = C:/msys64/ucrt64/lib/libgtest_main.dll.a  -llibmysql  C:/msys64/ucrt64/lib/libgtest.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/PROGRA~1/MySQL/MYSQLS~1.0/lib
   OBJECT_DIR = CMakeFiles\Tests.dir

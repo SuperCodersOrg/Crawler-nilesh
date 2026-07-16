@@ -2,7 +2,7 @@
 
 #include<string>
 #include "STL/LinkedList.h"
-using namespace std;
+
 
 template<typename T>
 class Queue{

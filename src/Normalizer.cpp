@@ -3,7 +3,7 @@
 #include<sstream>
 #include<fstream>
 
-
+using namespace std;
 
 // To_lower()
 void Normalizer::To_lower(string &link){

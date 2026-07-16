@@ -3,18 +3,48 @@
 #include<string>
 #include<sstream>
 
+using namespace std;
+
 // put(link and depth)
 void Frontier::put(string & link,int deep){
     URL url;
     url.link=link;
-    url.lastCrawl=getDate();
+    url.depth=deep;
+    database.putFrontier(link,deep);
+    queue.push(url);
+}
+// put(link,depth and maxDepth)
+void Frontier::putSeed(string & link,string & html,int deep=0,int max){
+    URL url;
+    url.link=link;
     url.depth=deep;
     queue.push(url);
+    database.putSeed(link,html,deep,max);  
+    
 }
 
 // pop()
 Frontier :: URL Frontier::pop(){
+    URL url=queue.front();
+    string link=url.link;
+    int depth=url.depth;
+    database.deleteFrontier(link,depth);
     return queue.pop();
+
+}
+
+void Frontier::backup(){
+    string link;
+    int depth;
+    database.getFrontier(link,depth);
+    while(link!="null"){
+        URL url;
+        url.depth=depth;
+        url.link=link;
+        queue.push(url);
+        database.getFrontier(link,depth);
+    }
+
 }
 
 // getLink()

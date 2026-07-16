@@ -1,7 +1,7 @@
 # ninja log v7
-8	802	8058186489637083	build.ninja	2da4b5d280c31512
-8	802	8058186489207026	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/cmake_install.cmake	2da4b5d280c31512
-8	802	8058186489322373	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/CTestTestfile.cmake	2da4b5d280c31512
+11	1093	8058876802085429	build.ninja	2da4b5d280c31512
+11	1093	8058876801843831	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/cmake_install.cmake	2da4b5d280c31512
+11	1093	8058876801910205	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/CTestTestfile.cmake	2da4b5d280c31512
 29	4068	8058131756303628	CMakeFiles/DatabaseTests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj	18d865ab7fd86ad0
 7	4056	8058125152048424	CMakeFiles/DatabaseTests.dir/DatabaseTest.cpp.obj	ab27d608183b3e1a
 23115	23995	8058144055635859	DatabaseTests.exe	62215cdfb80f6be0
@@ -19,6 +19,32 @@
 142	2705	8058180429331051	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/Normalizer.cpp.obj	c6b7ff265ce8dc50
 72	5269	8058180428619020	CMakeFiles/Tests.dir/NormalizerTests.cpp.obj	f76848876329e987
 25	3376	8058185393220241	CMakeFiles/Tests.dir/QueueTests.cpp.obj	4e1714405d7aabd5
-11	1093	8058186489637083	build.ninja	2da4b5d280c31512
-11	1093	8058186489637083	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/cmake_install.cmake	2da4b5d280c31512
-11	1093	8058186489637083	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/CTestTestfile.cmake	2da4b5d280c31512
+19	608	8058876802085429	build.ninja	2da4b5d280c31512
+19	608	8058876802085429	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/cmake_install.cmake	2da4b5d280c31512
+19	608	8058876802085429	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/CTestTestfile.cmake	2da4b5d280c31512
+445	4183	8058876807151639	CMakeFiles/Tests.dir/SetTests.cpp.obj	7b14cdd9d0dfa471
+265	5379	8058876805340675	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/HtmlParser.cpp.obj	13f95b7bc3006f9d
+302	8771	8058876805706282	CMakeFiles/Tests.dir/HtmlParserTests.cpp.obj	4354cb3534cbe817
+365	8936	8058876806407264	CMakeFiles/Tests.dir/QueueTests.cpp.obj	4e1714405d7aabd5
+50	9582	8058876803185328	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj	b1b3affe6d459779
+95	11415	8058876803633018	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj	40fa2d93fa886da1
+16	12491	8058876802841018	CMakeFiles/Tests.dir/PageStorageTests.cpp.obj	b2d9f09a3a6f4aa4
+199	12725	8058876804698216	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/Normalizer.cpp.obj	c6b7ff265ce8dc50
+138	12817	8058876804087644	CMakeFiles/Tests.dir/NormalizerTests.cpp.obj	f76848876329e987
+12818	14758	8058876949771981	Tests.exe	b92205d09f3bec5c
+12818	14758	8058876949771981	Tests[1]_tests.cmake	b92205d09f3bec5c
+12818	14758	8058876949771981	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests[1]_tests.cmake	b92205d09f3bec5c
+409	3835	8058950377215228	CMakeFiles/Tests.dir/HtmlParserTests.cpp.obj	4354cb3534cbe817
+485	3976	8058950821754540	CMakeFiles/Tests.dir/HtmlParserTests.cpp.obj	4354cb3534cbe817
+86	5221	8058952326950350	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/PageStorage.cpp.obj	b1b3affe6d459779
+161	5804	8058952327721221	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/Database/Database.cpp.obj	40fa2d93fa886da1
+275	6130	8058952328895611	CMakeFiles/Tests.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/src/Normalizer.cpp.obj	c6b7ff265ce8dc50
+26	7124	8058952326348560	CMakeFiles/Tests.dir/PageStorageTests.cpp.obj	b2d9f09a3a6f4aa4
+219	7548	8058952328276969	CMakeFiles/Tests.dir/NormalizerTests.cpp.obj	f76848876329e987
+7549	9060	8058952416188597	Tests.exe	b92205d09f3bec5c
+7549	9060	8058952416188597	Tests[1]_tests.cmake	b92205d09f3bec5c
+7549	9060	8058952416188597	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests[1]_tests.cmake	b92205d09f3bec5c
+27	2787	8058952817626809	CMakeFiles/Tests.dir/HtmlParserTests.cpp.obj	4354cb3534cbe817
+2788	3482	8058952851964843	Tests.exe	b92205d09f3bec5c
+2788	3482	8058952851964843	Tests[1]_tests.cmake	b92205d09f3bec5c
+2788	3482	8058952851964843	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/test/build/Tests[1]_tests.cmake	b92205d09f3bec5c

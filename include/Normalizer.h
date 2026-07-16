@@ -2,29 +2,29 @@
 #include <string>
 #include"STL/DynamicArray.h"
 #include"Frontier.h"
-using namespace std;
+
 
 
 class Normalizer{
     private:
-    const string DOMAIN_FILE = "../src/ignore/domain.txt";
-    const string EXTENSION_FILE = "../src/ignore/extension.txt";
-    string read(string page);
-    void To_lower(string& link);
-    void removeFragment(string& link);
-    void normalizePath(string &source);
-    void relativeURL(string &source);
+    const std::string DOMAIN_FILE = "../src/ignore/domain.txt";
+    const std::string EXTENSION_FILE = "../src/ignore/extension.txt";
+    std::string read(std::string page);
+    void To_lower(std::string& link);
+    void removeFragment(std::string& link);
+    void normalizePath(std::string &source);
+    void relativeURL(std::string &source);
     Frontier frontier;
     
     
     
     public:
-    Set<string>ignoreExtension;
-    Set<string>ignoreDomain;
-    bool isrelative(string &source);
-    string seedLink;
+    Set<std::string>ignoreExtension;
+    Set<std::string>ignoreDomain;
+    bool isrelative(std::string &source);
+    std::string seedLink;
     Normalizer();
-    void normalize(string & link);
-    DynamicArray<string> normalize(DynamicArray<string> & link);
+    void normalize(std::string & link);
+    DynamicArray<std::string> normalize(DynamicArray<std::string> & link);
 
 };

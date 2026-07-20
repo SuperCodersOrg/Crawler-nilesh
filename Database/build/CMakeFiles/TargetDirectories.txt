@@ -1,3 +1,0 @@
-D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database/build/CMakeFiles/DatabaseTest.dir
-D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database/build/CMakeFiles/edit_cache.dir
-D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/Database/build/CMakeFiles/rebuild_cache.dir

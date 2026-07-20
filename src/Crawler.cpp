@@ -16,7 +16,7 @@ void Crawler:: Continue(){
     pages.getLastFrontier(url,deep,id,max);
 
     if(url=="null"){
-        cout<<"Last Url not found";
+        cout<<"Frontier is already empty\n";
         return ;
     }
         frontier.backup();
@@ -28,9 +28,45 @@ void Crawler:: Continue(){
         cout<<"Finished\n";
 }
 
+void Crawler::crawl(std::string seed, int deep)
+{
+    depth = deep;
+
+    if (normalizer.isrelative(seed))
+    {
+        cout << "Source link is invalid or relative" << endl;
+        return;
+    }
+
+    
+    
+    // Fetch seed page
+    string seedHtml = fetch.getHtml(seed);
+    seedHtml=htmlparser.parseContent(seedHtml);
+    
+   
+    
+    
+
+    // Insert only into seeds table
+    size_t seedId = frontier.putSeed(seed, seedHtml, deep);
+
+    if (seedId == 0) {
+        cout << "Seed it invalid\n";
+        return;
+    }
+
+
+    loop(seed,seedHtml,seedId);
+    
+}
+
+
 void Crawler::loop(string seed,string seedHtml,int seedId){
 
     size_t count=0;
+    size_t duplicateFrontier=0;
+
     while (!frontier.empty()){
         cout << "-------------------------------------------------------------\n";
         cout << "Next Url : " << frontier.getLink() << endl;
@@ -64,6 +100,7 @@ void Crawler::loop(string seed,string seedHtml,int seedId){
             if (visited.exists(link))
             {
                 cout << "Already Visited : " << link << endl;
+                duplicateFrontier++;
                 continue;
             }
 
@@ -77,7 +114,8 @@ void Crawler::loop(string seed,string seedHtml,int seedId){
 
             visited.insert(link);
 
-            DynamicArray<string> links = htmlparser.parseHtml(html);
+            DynamicArray<string> links = htmlparser.parseLinks(html);
+            html=htmlparser.parseContent(html);
 
             for (int i = 0; i < links.size(); i++)
             {
@@ -85,6 +123,7 @@ void Crawler::loop(string seed,string seedHtml,int seedId){
 
                 if (!links[i].empty() && !visited.exists(links[i]))
                 {
+                    // Database will store unique links
                     frontier.put(links[i], linkDepth + 1,depth,seedId);
                 }
             }
@@ -92,6 +131,7 @@ void Crawler::loop(string seed,string seedHtml,int seedId){
             // Don't insert Seed page into pages table 
             if (linkDepth != 0)
             {
+                // Databse not stores duplicate pages
                 pages.storePage(link, html, linkDepth,seedId);
             }
             
@@ -106,32 +146,19 @@ void Crawler::loop(string seed,string seedHtml,int seedId){
 
         count++;
     }
+    cout<<"------------------------------------------------------------\n";
+    cout<<"Result: \n";
+    cout<<"------------------------------------------------------------\n";
+    cout<<"Total website visited: "<<count<<endl;
+    cout<<"Total duplicate url in pages table : "<<pages.duplicatePages<<endl;
+    cout<<"Total duplicate url in frontier : "<<duplicateFrontier<<endl;
+    cout<<"Total pages fetch by curl : "<<fetch.curlURL<<endl;
+    cout<<"Total pages fetch by CDP : "<<fetch.CDPURL<<endl;
+
+
 
 }
 
-void Crawler::crawl(std::string seed, int deep)
-{
-    depth = deep;
-
-    if (normalizer.isrelative(seed))
-    {
-        cout << "Source link is invalid or relative" << endl;
-        return;
-    }
-
-    
-
-    // Fetch seed page
-    string seedHtml = fetch.getHtml(seed);
-
-    // Insert only into seeds table
-    int seedId=frontier.putSeed(seed, seedHtml, deep);
-
-    
-
-    loop(seed,seedHtml,seedId);
-    
-}
 int main(){
     cout << "Main Started\n";
 

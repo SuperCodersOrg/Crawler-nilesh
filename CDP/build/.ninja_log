@@ -2,3 +2,14 @@
 34	7047	8057261353153966	CMakeFiles/cdp_scraper.dir/main.cpp.obj	652474d2a19b9de
 8	36220	8057261352891199	CMakeFiles/cdp_scraper.dir/CDPScraper.cpp.obj	d93f102f56ccbf6
 36222	37052	8057261715220082	cdp_scraper.exe	f552cfa7297d4ff1
+89	1546	8060602699981519	build.ninja	817b4ef81c22dd1e
+89	1546	8060602699981519	D:/CodeQuotient/Project/Project 2 - Crawler/Web_crawler/CDP/build/cmake_install.cmake	817b4ef81c22dd1e
+58	4869	8060602701374896	CMakeFiles/cdp_scraper.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/check/test.cpp.obj	7006a9960b4f6bd3
+19	9605	8060602700982235	CMakeFiles/cdp_scraper.dir/CDPScraper.cpp.obj	d93f102f56ccbf6
+9606	10500	8060602796852901	cdp_scraper.exe	954d7d55b54b063d
+25	4009	8060604148305647	CMakeFiles/cdp_scraper.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/check/test.cpp.obj	7006a9960b4f6bd3
+4013	4685	8060604188174201	cdp_scraper.exe	954d7d55b54b063d
+23	7169	8060605684598883	CMakeFiles/cdp_scraper.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/check/test.cpp.obj	7006a9960b4f6bd3
+7173	8142	8060605756105411	cdp_scraper.exe	954d7d55b54b063d
+26	5001	8060606572046817	CMakeFiles/cdp_scraper.dir/D_/CodeQuotient/Project/Project_2_-_Crawler/Web_crawler/check/test.cpp.obj	7006a9960b4f6bd3
+5003	5531	8060606621808105	cdp_scraper.exe	954d7d55b54b063d

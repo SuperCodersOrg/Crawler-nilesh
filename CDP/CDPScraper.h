@@ -79,7 +79,10 @@ public:
         int maxWaitSeconds = 3,
         int numTabs = 4,
         bool blockImagesEtc = true
+
     );
+    size_t curlURL=0;
+    size_t CDPURL=0;
 
     // Destructor -> yahan saare tabs + Chrome ko band kiya jata hai
     ~CDPScraper();

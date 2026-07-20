@@ -503,7 +503,7 @@ void CDPScraper::releaseTab(Tab* tab) {
     pool_.push_back(tab);
     poolCv_.notify_one();
 }
-
+#include <fstream>
 // ===== Ye hi wo main function hai jo user use karega =====
 string CDPScraper::getHtml(const string& url) {
     if (!chromeRunning_) {
@@ -515,7 +515,8 @@ string CDPScraper::getHtml(const string& url) {
     const long kCurlTimeoutSeconds = 6;
     string curlHtml = curlFetchPage(url, kCurlTimeoutSeconds);
     if (!isDynamicPage(curlHtml)) {
-        cout<<"curl page\n";
+        cout<<"Static page\n";
+        curlURL++;
         return curlHtml; // static/simple page mil gaya -> CDP ki zaroorat hi nahi
     }
 
@@ -550,7 +551,9 @@ string CDPScraper::getHtml(const string& url) {
         releaseTab(tab);
         throw;
     }
-    cout<<"js page\n";
+    
+    cout<<"Dynamic page\n";
+    CDPURL++;
     releaseTab(tab);
     return html;
 }

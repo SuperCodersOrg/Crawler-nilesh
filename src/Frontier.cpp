@@ -15,13 +15,18 @@ void Frontier::put(string & link,int deep,int max,int Id){
 }
 // put(link,depth and maxDepth)
 size_t Frontier::putSeed(string & link,string & html,int max,int deep){
+    size_t seedId = pages.putSeeds(link,html,deep,max);
+    if (seedId == 0) {
+        return 0;
+    }
+
+
+
     URL url;
-    url.link=link;
-    url.depth=deep;
+    url.link = link;
+    url.depth = deep;
     queue.push(url);
-    return pages.putSeeds(link,html,deep,max);
-    
-    
+    return seedId;
 }
 
 // pop()

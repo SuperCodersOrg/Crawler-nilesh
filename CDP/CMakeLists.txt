@@ -11,7 +11,7 @@ find_package(nlohmann_json REQUIRED)
 
 add_executable(cdp_scraper
     CDPScraper.cpp
-    main.cpp
+    ../check/test.cpp
 )
 
 target_link_libraries(cdp_scraper

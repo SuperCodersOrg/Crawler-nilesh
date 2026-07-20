@@ -163,9 +163,8 @@ bool PageStorage::storePage(std::string &url,
 
     if (mysql_stmt_prepare(stmt, query, strlen(query)))
     {
-        cout << "Prepare Error : "
-             << mysql_stmt_error(stmt) << endl;
-
+        duplicatePages++;
+        cout<<"Duplicate pages found: "<<duplicatePages;
         mysql_stmt_close(stmt);
         return false;
     }
@@ -400,7 +399,7 @@ size_t PageStorage::putSeeds(std::string &link,
     {
         cout << "Execute Error : "
              << mysql_stmt_error(stmt) << endl;
-
+        cout<< "Error hint: You have already crawl this link as a seed url\n";
         mysql_stmt_close(stmt);
         return 0;
     }

@@ -1,4 +1,5 @@
 #include"../include/HtmlParser.h"
+#include"../include/Set.h"
 #include<iostream>
 using namespace std;
 
@@ -50,7 +51,7 @@ size_t HtmlParser::parseHref(const string &html,size_t start){
     return html.size();
 }
 
-DynamicArray<string> HtmlParser::parseHtml(const string &html){
+DynamicArray<string> HtmlParser::parseLinks(const string &html){
     size_t index=0;
     links.clear();
     while(index+4<=html.size()){
@@ -66,4 +67,86 @@ DynamicArray<string> HtmlParser::parseHtml(const string &html){
     }
 
     return links;
+}
+
+string HtmlParser:: parseContent(const string& html)
+{
+    string content;
+    string tag;
+
+    bool insideTag = false;
+    bool skipContent = false;
+
+    
+    Set<string> skipTags;
+
+    skipTags.insert("script");
+    skipTags.insert("style");
+    skipTags.insert("head");
+    skipTags.insert("noscript");
+    skipTags.insert("meta");
+    skipTags.insert("link");
+    skipTags.insert("title");
+
+    for (size_t i = 0; i < html.size(); i++)
+    {
+        if (html[i] == '<')
+        {
+            insideTag = true;
+            tag.clear();
+
+            i++;
+
+            bool closing = false;
+
+            if (i < html.size() && html[i] == '/')
+            {
+                closing = true;
+                i++;
+            }
+
+            while (i < html.size() &&
+                   html[i] != '>' &&
+                   !isspace((unsigned char)html[i]))
+            {
+                tag += (char)tolower((unsigned char)html[i]);
+                i++;
+            }
+
+            while (i < html.size() && html[i] != '>')
+                i++;
+
+            if (skipTags.exists(tag))
+            {
+                if (closing)
+                    skipContent = false;
+                else
+                    skipContent = true;
+            }
+
+            insideTag = false;
+
+            if (!content.empty() && content.back() != ' ')
+                content += ' ';
+
+            continue;
+        }
+
+        if (insideTag || skipContent)
+            continue;
+
+        // '\r' '\t' '\n' ' '
+        // negative value nhi dalni chahiye
+        if (isspace((unsigned char)html[i]))
+        {
+            if (!content.empty() && content.back() != ' ')
+                content += ' ';
+        }
+        else
+        {
+            content += html[i];
+        }
+    }
+
+    return content;
 }

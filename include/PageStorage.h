@@ -7,11 +7,12 @@ class PageStorage
 {
 private:
     MYSQL *conn;
-
-public:
+    
+    public:
     PageStorage();
     ~PageStorage();
-
+    size_t duplicatePages=0;
+    
     // Pages Table
     bool storePage(std::string &url,
                    std::string &html,

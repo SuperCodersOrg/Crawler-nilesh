@@ -417,3 +417,189 @@ PageStorage::~PageStorage()
     if (conn)
         mysql_close(conn);
 }
+
+std::string PageStorage::getHtml(int id)
+{
+    std::string html="";
+
+    const char *query = "SELECT html FROM pages WHERE id = ?";
+
+    MYSQL_STMT *stmt = mysql_stmt_init(conn);
+    if (!stmt)
+        return html;
+
+    if (mysql_stmt_prepare(stmt, query, strlen(query)))
+    {
+        mysql_stmt_close(stmt);
+        return html;
+    }
+
+    MYSQL_BIND param[1];
+    memset(param, 0, sizeof(param));
+
+    param[0].buffer_type = MYSQL_TYPE_LONG;
+    param[0].buffer = &id;
+    param[0].is_unsigned = false;
+
+    if (mysql_stmt_bind_param(stmt, param))
+    {
+        mysql_stmt_close(stmt);
+        return html;
+    }
+
+    if (mysql_stmt_execute(stmt))
+    {
+        mysql_stmt_close(stmt);
+        return html;
+    }
+
+    char buffer[65536];
+    unsigned long length = 0;
+    bool isNull = false;
+    bool error = false;
+
+    MYSQL_BIND result[1];
+    memset(result, 0, sizeof(result));
+
+    result[0].buffer_type = MYSQL_TYPE_STRING;
+    result[0].buffer = buffer;
+    result[0].buffer_length = sizeof(buffer);
+    result[0].length = &length;
+    result[0].is_null = &isNull;
+    result[0].error = &error;
+
+    if (mysql_stmt_bind_result(stmt, result))
+    {
+        mysql_stmt_close(stmt);
+        return html;
+    }
+
+    int status = mysql_stmt_fetch(stmt);
+
+    if (status == 0 && !isNull)
+    {
+        html.assign(buffer, length);
+    }
+
+    mysql_stmt_close(stmt);
+
+    return html;
+}
+
+int PageStorage::getMaxPageId()
+{
+    const char *query = "SELECT MAX(id) FROM pages";
+
+    if (mysql_query(conn, query))
+    {
+        std::cerr << "MySQL Query Error: "
+                  << mysql_error(conn) << std::endl;
+        return 0;
+    }
+
+    MYSQL_RES *result = mysql_store_result(conn);
+
+    if (result == nullptr)
+    {
+        std::cerr << "Failed to fetch result: "
+                  << mysql_error(conn) << std::endl;
+        return 0;
+    }
+
+    MYSQL_ROW row = mysql_fetch_row(result);
+
+    int maxId = 0;
+
+    if (row && row[0] != nullptr)
+    {
+        maxId = std::stoi(row[0]);
+    }
+
+    mysql_free_result(result);
+
+    return maxId;
+}
+
+std::string PageStorage::getUrl(int id)
+{
+    std::string url;
+
+    std::string query =
+        "SELECT url FROM pages WHERE id = " + std::to_string(id);
+
+    if (mysql_query(conn, query.c_str()))
+    {
+        std::cerr << "MySQL Query Error: "
+                  << mysql_error(conn) << std::endl;
+        return "";
+    }
+
+    MYSQL_RES *result = mysql_store_result(conn);
+
+    if (result == nullptr)
+    {
+        std::cerr << "MySQL Store Result Error: "
+                  << mysql_error(conn) << std::endl;
+        return "";
+    }
+
+    MYSQL_ROW row = mysql_fetch_row(result);
+
+    if (row != nullptr && row[0] != nullptr)
+    {
+        url = row[0];
+    }
+
+    mysql_free_result(result);
+
+    return url;
+}
+
+bool PageStorage::putIndexer(const std::string &word,
+                             int maxFrequency,
+                             const std::string &url)
+{
+    const char *query =
+        "INSERT INTO indexer(word, max_frequency, url) "
+        "VALUES(?, ?, ?)";
+
+    MYSQL_STMT *stmt = mysql_stmt_init(conn);
+    if (!stmt)
+        return false;
+
+    if (mysql_stmt_prepare(stmt, query, strlen(query)))
+    {
+        mysql_stmt_close(stmt);
+        return false;
+    }
+
+    MYSQL_BIND bind[3];
+    memset(bind, 0, sizeof(bind));
+
+    // word
+    bind[0].buffer_type = MYSQL_TYPE_STRING;
+    bind[0].buffer = (void *)word.c_str();
+    unsigned long wordLength = word.length();
+    bind[0].length = &wordLength;
+
+    // max_frequency
+    bind[1].buffer_type = MYSQL_TYPE_LONG;
+    bind[1].buffer = (void *)&maxFrequency;
+
+    // url
+    bind[2].buffer_type = MYSQL_TYPE_STRING;
+    bind[2].buffer = (void *)url.c_str();
+    unsigned long urlLength = url.length();
+    bind[2].length = &urlLength;
+
+    if (mysql_stmt_bind_param(stmt, bind))
+    {
+        mysql_stmt_close(stmt);
+        return false;
+    }
+
+    bool success = (mysql_stmt_execute(stmt) == 0);
+
+    mysql_stmt_close(stmt);
+    return success;
+}

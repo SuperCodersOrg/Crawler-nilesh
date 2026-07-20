@@ -25,6 +25,9 @@ private:
                  std::string &lastCrawl);
 
     std::string getHtml(std::string &url);
+    std::string getHtml(int id);
+    int getMaxPageId();  
+    std::string getUrl(int id);
 
     int getDepth(std::string &url);
 
@@ -44,9 +47,14 @@ private:
     void getFrontier(std::string &url,
                      int &depth);
 
-                     // Seeds Table
+    // Seeds Table
     size_t putSeeds(std::string &url,
                  std::string &html,
                  int &depth,
                  int &max);
+    
+    // Indexer Table
+    bool putIndexer(const std::string &word,
+                int maxFrequency,
+                const std::string &url);
 };
